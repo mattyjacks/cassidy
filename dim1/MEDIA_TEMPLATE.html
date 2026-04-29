@@ -1,0 +1,64 @@
+<!-- 
+MEDIA TEMPLATE - How to Add Your Photos and Videos to the Gallery
+
+Replace the placeholder divs in the #gallery section with these examples.
+Copy and paste the code below into the gallery-grid div.
+-->
+
+<!-- EXAMPLE 1: Adding a Photo -->
+<div class="gallery-item">
+    <img src="public/media/favorites/your-photo.jpg" alt="Studio Setup" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<!-- EXAMPLE 2: Adding a Video (MP4) -->
+<div class="gallery-item">
+    <video style="width: 100%; height: 100%; object-fit: cover;" controls>
+        <source src="public/media/favorites/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- EXAMPLE 3: Embedded YouTube Video -->
+<div class="gallery-item">
+    <iframe 
+        style="width: 100%; height: 100%; border: none;" 
+        src="https://www.youtube.com/embed/VIDEO_ID" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- EXAMPLE 4: Image with Caption -->
+<div class="gallery-item" style="position: relative;">
+    <img src="public/media/favorites/your-photo.jpg" alt="Description" style="width: 100%; height: 100%; object-fit: cover;">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; text-align: center;">
+        <p>Your Caption Here</p>
+    </div>
+</div>
+
+<!-- 
+INSTRUCTIONS:
+
+1. Save your photos/videos to:
+   - public/media/favorites/
+   - public/media/testimonials/
+   - public/media/behind-the-scenes/
+
+2. In index.html, find the #gallery section (around line 180)
+
+3. Replace the placeholder gallery-item divs with the examples above
+
+4. Update the src/href attributes with your actual file paths
+
+5. Save and refresh your browser
+
+SUPPORTED FORMATS:
+- Photos: JPG, PNG, WebP, GIF
+- Videos: MP4, WebM
+- YouTube: Embed links
+
+TIPS:
+- Use high-quality images (at least 800x600px)
+- Compress videos for faster loading
+- Use descriptive alt text for accessibility
+- Test on mobile devices
+-->
