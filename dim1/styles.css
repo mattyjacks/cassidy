@@ -160,6 +160,22 @@ body {
     padding: 2rem 0;
 }
 
+.hero-video-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
 .hero-logo-container {
     position: absolute;
     top: 50%;
@@ -185,8 +201,8 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 2;
 }
 
 .hero-content {
@@ -751,6 +767,110 @@ body {
 
 .video-testimonials p {
     color: #666;
+}
+
+/* ========== CASE STUDIES ========== */
+.case-studies {
+    padding: 5rem 0;
+    background: white;
+}
+
+.case-studies h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0 4rem;
+}
+
+.case-study-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.case-study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.case-study-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.case-study-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ========== PRACTICE WALKTHROUGHS ========== */
+.walkthroughs {
+    padding: 5rem 0;
+    background: var(--secondary);
+}
+
+.walkthroughs h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.walkthroughs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 4rem;
+}
+
+.walkthrough-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.walkthrough-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.walkthrough-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.walkthrough-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* ========== #34 COMPARISON TABLE ========== */
@@ -1394,6 +1514,14 @@ body {
     }
 
     .contact-copy h2 { text-align: center; }
+
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .walkthroughs-grid {
+        grid-template-columns: 1fr;
+    }
 
     .sticky-bottom-cta { display: flex; }
     .footer { padding-bottom: 5rem; }
