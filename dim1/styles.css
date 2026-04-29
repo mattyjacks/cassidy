@@ -169,7 +169,8 @@ body {
     overflow: hidden;
 }
 
-.hero-video-container iframe {
+.hero-video-container iframe,
+.hero-video-container video {
     width: 100%;
     height: 100%;
     border: none;
@@ -864,13 +865,23 @@ body {
     background: #000;
 }
 
-.walkthrough-video iframe {
+.walkthrough-video iframe,
+.walkthrough-video video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover;
+}
+
+.video-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(128,128,128,0.4));
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* ========== #34 COMPARISON TABLE ========== */
