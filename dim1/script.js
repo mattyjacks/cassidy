@@ -4,6 +4,77 @@ if (typeof window !== 'undefined') {
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // ===== MOBILE VIDEO HANDLING =====
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+    // Disable hero video autoplay on mobile to prevent crash
+    if (isMobile) {
+        var heroVideo = document.querySelector('.hero-bg-video');
+        if (heroVideo) {
+            heroVideo.removeAttribute('autoplay');
+            heroVideo.pause();
+            heroVideo.preload = 'none';
+            // Remove the source to prevent any loading
+            var heroSource = heroVideo.querySelector('source');
+            if (heroSource) heroSource.removeAttribute('src');
+            heroVideo.load();
+        }
+    }
+
+    // Lazy-load videos with data-src using IntersectionObserver
+    var lazyVideos = document.querySelectorAll('.lazy-video');
+    if (lazyVideos.length > 0 && 'IntersectionObserver' in window) {
+        var videoObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !isMobile) {
+                    var video = entry.target;
+                    var src = video.getAttribute('data-src');
+                    if (src) {
+                        var source = video.querySelector('source');
+                        if (source) source.src = src;
+                        video.load();
+                        video.play();
+                    }
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    }
+
+    // On mobile, defer iframe loading until they are near viewport
+    if (isMobile) {
+        var allIframes = document.querySelectorAll('iframe[loading="lazy"]');
+        allIframes.forEach(function(iframe) {
+            var realSrc = iframe.getAttribute('src');
+            iframe.setAttribute('data-src', realSrc);
+            iframe.removeAttribute('src');
+        });
+
+        if ('IntersectionObserver' in window) {
+            var iframeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var iframe = entry.target;
+                        var src = iframe.getAttribute('data-src');
+                        if (src) {
+                            iframe.src = src;
+                            iframe.removeAttribute('data-src');
+                        }
+                        iframeObserver.unobserve(iframe);
+                    }
+                });
+            }, { rootMargin: '400px' });
+
+            allIframes.forEach(function(iframe) {
+                iframeObserver.observe(iframe);
+            });
+        }
+    }
+
     // ===== FORM SUBMISSION =====
     var contactForm = document.getElementById('lead-form');
     if (contactForm) {
