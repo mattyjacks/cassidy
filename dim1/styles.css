@@ -358,7 +358,7 @@ body {
 
 /* ========== #10 PAIN POINTS ========== */
 .pain-points {
-    padding: 5rem 0;
+    padding: 3rem 0;
     background: #fdf6f0;
 }
 
@@ -1476,27 +1476,39 @@ body {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .urgency-inner { font-size: 0.8rem; gap: 0.5rem; }
+    .urgency-inner { font-size: 0.8rem; gap: 0.5rem; flex-wrap: wrap; }
+    .urgency-cta { padding: 0.25rem 0.8rem; font-size: 0.75rem; }
 
     .logo-text { display: none; }
     .logo-img { height: 40px; }
+    .nav-container { padding: 0 10px; }
 
-    .nav-links { gap: 0.75rem; font-size: 0.8rem; }
-    .nav-phone { padding: 0.4rem 0.7rem; font-size: 0.8rem !important; }
+    .nav-links { 
+        gap: 0.5rem; 
+        font-size: 0.75rem; 
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .nav-links li:not(:last-child) { display: none; }
+    .nav-phone { padding: 0.4rem 0.6rem; font-size: 0.75rem !important; }
 
-    .hero { min-height: auto; padding: 4rem 1rem; }
-    .hero h1 { font-size: 2rem; }
-    .hero-sub { font-size: 1rem; }
-    .hero-logo { width: 300px; }
-    .hero-ctas { flex-direction: column; align-items: center; }
-    .cta-button { width: 100%; max-width: 320px; }
-    .countdown-unit { min-width: 55px; padding: 0.5rem; }
-    .countdown-unit span { font-size: 1.4rem; }
+    .hero { min-height: auto; padding: 3rem 1rem; }
+    .hero-content { padding: 1rem; }
+    .hero h1 { font-size: 1.8rem; line-height: 1.2; }
+    .hero-eyebrow { font-size: 0.8rem; margin-bottom: 1rem; }
+    .hero-sub { font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .hero-logo { width: 250px; }
+    .hero-ctas { flex-direction: column; align-items: center; gap: 0.75rem; }
+    .cta-button { width: 100%; max-width: 280px; padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+    .countdown-timer { gap: 0.5rem; }
+    .countdown-unit { min-width: 50px; padding: 0.4rem 0.5rem; }
+    .countdown-unit span { font-size: 1.2rem; }
+    .countdown-unit small { font-size: 0.6rem; }
 
-    h2 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.6rem !important; }
 
-    .trust-badges { gap: 1rem; }
-    .trust-badge { font-size: 0.8rem; }
+    .trust-badges { gap: 0.8rem; }
+    .trust-badge { font-size: 0.75rem; }
 
     .pain-grid,
     .stats-grid,
@@ -1504,8 +1516,11 @@ body {
     .ps-grid,
     .transform-grid,
     .testimonials-grid,
-    .american-grid {
+    .american-grid,
+    .case-studies-grid,
+    .walkthroughs-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .contact-layout {
@@ -1513,26 +1528,158 @@ body {
         gap: 2rem;
     }
 
-    .contact-copy h2 { text-align: center; }
+    .contact-copy h2 { text-align: center; font-size: 1.6rem; }
+    .contact-copy { padding: 0 1rem; }
+    .contact-form-wrap { padding: 1.5rem; }
+    .contact-benefits li { font-size: 0.95rem; }
 
-    .case-studies-grid {
-        grid-template-columns: 1fr;
+    .sticky-bottom-cta { 
+        display: flex; 
+        height: auto;
+    }
+    .sticky-bottom-cta a { 
+        width: 50%; 
+        padding: 0.85rem 0.5rem; 
+        font-size: 0.8rem;
     }
 
-    .walkthroughs-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sticky-bottom-cta { display: flex; }
     .footer { padding-bottom: 5rem; }
     .footer-logo-img { height: 55px; }
+    .footer p { font-size: 0.8rem; }
+
+    .comparison-table-wrap { overflow-x: auto; }
+    .comparison-table th,
+    .comparison-table td { padding: 0.75rem 0.5rem; font-size: 0.85rem; }
+
+    .cta-break h2 { font-size: 1.6rem; }
+    .cta-break p { font-size: 1rem; }
+
+    .pain-points { padding: 3rem 0; }
+    .stats-section { padding: 3rem 0; }
+    .how-it-works { padding: 3rem 0; }
+    .five-ps { padding: 3rem 0; }
+    .transformation { padding: 3rem 0; }
+    .testimonials { padding: 3rem 0; }
+    .case-studies { padding: 3rem 0; }
+    .walkthroughs { padding: 3rem 0; }
+    .comparison { padding: 3rem 0; }
+    .american-section { padding: 3rem 0; }
+    .guarantee-section { padding: 3rem 0; }
+    .faq-section { padding: 3rem 0; }
+    .vision { padding: 3rem 0; }
+    .gallery { padding: 3rem 0; }
+    .contact { padding: 3rem 0; }
+    .story { padding: 3rem 0; }
+    .cta-break { padding: 3rem 0; }
 }
 
 @media (max-width: 480px) {
+    .urgency-inner { font-size: 0.7rem; gap: 0.3rem; }
+    .urgency-cta { padding: 0.2rem 0.6rem; font-size: 0.65rem; }
+
     .logo-img { height: 35px; }
-    .hero h1 { font-size: 1.6rem; }
-    .hero-logo { width: 200px; }
-    .stat-number { font-size: 2.5rem; }
-    .guarantee-box { padding: 2rem 1.5rem; }
-    .contact-form-wrap { padding: 1.5rem; }
+    .nav-container { padding: 0 8px; }
+    .nav-links { gap: 0.3rem; }
+    .nav-phone { padding: 0.3rem 0.5rem; font-size: 0.65rem !important; }
+
+    .hero { padding: 2rem 0.75rem; }
+    .hero-content { padding: 0.75rem; }
+    .hero h1 { font-size: 1.5rem; line-height: 1.1; margin-bottom: 1rem; }
+    .hero-eyebrow { font-size: 0.7rem; margin-bottom: 0.75rem; }
+    .hero-sub { font-size: 0.85rem; margin-bottom: 1.25rem; line-height: 1.5; }
+    .hero-logo { width: 180px; }
+    .hero-ctas { gap: 0.5rem; }
+    .cta-button { max-width: 100%; padding: 0.75rem 1.25rem; font-size: 0.85rem; }
+    .countdown-timer { gap: 0.3rem; }
+    .countdown-unit { min-width: 45px; padding: 0.3rem 0.3rem; }
+    .countdown-unit span { font-size: 1rem; }
+    .countdown-unit small { font-size: 0.5rem; }
+
+    h2 { font-size: 1.4rem !important; }
+
+    .pain-grid,
+    .stats-grid,
+    .steps-grid,
+    .ps-grid,
+    .transform-grid,
+    .testimonials-grid,
+    .american-grid,
+    .case-studies-grid,
+    .walkthroughs-grid {
+        gap: 1rem;
+    }
+
+    .pain-card,
+    .step-card,
+    .p-card,
+    .transform-card,
+    .testimonial-card,
+    .american-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number { font-size: 2.2rem; }
+    .stat-label { font-size: 0.85rem; }
+
+    .guarantee-box { 
+        padding: 1.5rem 1rem; 
+        border: 2px solid var(--accent);
+    }
+    .guarantee-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .guarantee-box h2 { font-size: 1.5rem; }
+
+    .contact-layout { gap: 1.5rem; }
+    .contact-copy h2 { font-size: 1.5rem; }
+    .contact-copy { padding: 0; }
+    .contact-form-wrap { padding: 1.25rem; }
+    .contact-benefits li { font-size: 0.9rem; }
+    .form-group input { padding: 0.85rem; font-size: 0.95rem; }
+    .submit-button { padding: 0.95rem; font-size: 0.95rem; }
+
+    .sticky-bottom-cta a { 
+        padding: 0.75rem 0.3rem; 
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+
+    .footer { padding: 2rem 0 4.5rem; }
+    .footer-logo-img { height: 50px; }
+    .footer p { font-size: 0.75rem; margin: 0.3rem 0; }
+
+    .comparison-table th,
+    .comparison-table td { 
+        padding: 0.5rem 0.3rem; 
+        font-size: 0.75rem; 
+    }
+
+    .cta-break { padding: 2.5rem 0; }
+    .cta-break h2 { font-size: 1.4rem; }
+    .cta-break p { font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+    .section-intro { font-size: 0.95rem; margin-bottom: 2rem; }
+
+    .faq-question { 
+        padding: 1rem 1rem; 
+        font-size: 0.95rem; 
+    }
+    .faq-toggle { font-size: 1.3rem; margin-left: 0.5rem; }
+    .faq-answer p { padding: 0 1rem 1rem; font-size: 0.9rem; }
+
+    .stats-section { padding: 3rem 0; }
+    .how-it-works { padding: 3rem 0; }
+    .five-ps { padding: 3rem 0; }
+    .transformation { padding: 3rem 0; }
+    .testimonials { padding: 3rem 0; }
+    .case-studies { padding: 3rem 0; }
+    .walkthroughs { padding: 3rem 0; }
+    .comparison { padding: 3rem 0; }
+    .american-section { padding: 3rem 0; }
+    .guarantee-section { padding: 3rem 0; }
+    .faq-section { padding: 3rem 0; }
+    .vision { padding: 3rem 0; }
+    .gallery { padding: 3rem 0; }
+    .contact { padding: 3rem 0; }
+    .story { padding: 3rem 0; }
+
+    .container { padding: 0 12px; }
 }
