@@ -1,3 +1,7 @@
+if (typeof window !== 'undefined') {
+    window.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // ===== FORM SUBMISSION =====
