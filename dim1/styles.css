@@ -813,13 +813,15 @@ body {
     background: #000;
 }
 
-.case-study-video iframe {
+.case-study-video iframe,
+.case-study-video video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover;
 }
 
 /* ========== PRACTICE WALKTHROUGHS ========== */
