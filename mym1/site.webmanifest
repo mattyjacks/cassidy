@@ -1,0 +1,16 @@
+{
+  "name": "Manifest Media Broker Group",
+  "short_name": "ManifestMedia",
+  "description": "High-Ticket Dental Implant Marketing & Cinematic Storytelling by Cassidy Torrey",
+  "start_url": "/mym1/index.html",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "/mym1/assets/svg/logo-manifest.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

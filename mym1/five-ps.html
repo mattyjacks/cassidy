@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Proprietary 5 P's Framework | Cassidy Torrey & Manifest Media</title>
+  <meta name="description" content="Detailed architectural guide to Cassidy Torrey's 5 P's Marketing Engine: Promise, Picture, Proof, Pitch, Polish. Deconstructing behavioral economics in dental surgery. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/FivePsInteractive.js"></script>
+  <script src="./js/components/IronCladGuaranteeBadge.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function FivePsPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'five-ps' });
+        }, []);
+
+        var fivePs = window.FIVE_PS_FRAMEWORK || [];
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'five-ps.html' }),
+
+            // Hero Header
+            e('section', { className: 'py-20 bg-gradient-to-b from-[#111827] via-[#080b12] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+              e('div', { className: 'spotlight-gold' }),
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4 relative z-10' },
+                e('div', { className: 'badge-pill' }, 'Proprietary Marketing Science'),
+                e('h1', { className: 'text-white' },
+                  'The Proprietary ',
+                  e('span', { className: 'gold-gradient-text' }, '5 P\'s Framework')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'Deconstructing the behavioral economics, neuroscience, and cinematic storytelling engine that drives 7X to 10X ROAS for surgical practices.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+            e(window.FivePsInteractive, { basePath: './' }),
+
+            // Exhaustive Pillar Breakdown
+            e('section', { className: 'py-16 bg-[#07090e]' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-12' },
+                fivePs.map(function(item, idx) {
+                  return e('div', { key: idx, className: 'glass-card-premium p-8 md:p-10 space-y-4 gold-border-glow' },
+                    e('div', { className: 'flex items-center justify-between border-b border-slate-800 pb-3' },
+                      e('div', { className: 'flex items-center gap-3' },
+                        e('span', { className: 'font-mono text-3xl font-extrabold text-amber-400' }, item.step),
+                        e('div', null,
+                          e('h2', { className: 'text-2xl font-bold text-white font-cinzel' }, item.pillar),
+                          e('div', { className: 'text-xs text-amber-300 font-semibold' }, item.tagline)
+                        )
+                      ),
+                      e('span', { className: 'badge-pill text-[10px]' }, 'Pillar ' + item.step)
+                    ),
+                    e('div', { className: 'space-y-3 pt-2 text-sm text-slate-300 leading-relaxed' },
+                      e('p', null, item.description),
+                      e('div', { className: 'p-4 rounded-lg bg-slate-900 border border-slate-800' },
+                        e('strong', { className: 'text-yellow-400 block text-xs uppercase mb-1' }, 'Psychological Mechanism:'),
+                        item.psychology
+                      ),
+                      e('div', { className: 'flex items-center gap-2 text-xs text-emerald-400' },
+                        e('strong', null, 'Tactical Deliverable:'),
+                        e('span', { className: 'text-slate-300' }, item.actionableDeliverable)
+                      )
+                    )
+                  );
+                })
+              )
+            ),
+
+            e(window.IronCladGuaranteeBadge, { basePath: './' }),
+            e(window.DisambiguationBanner, { basePath: './' }),
+
+            // Booking Form
+            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
+                e('div', { className: 'badge-pill' }, 'Implement The 5 P\'s'),
+                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Deploy The 5 P\'s in Your Market'),
+                e(window.LeadCaptureForm, { basePath: './' })
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(FivePsPage));
+    })();
+  </script>
+</body>
+</html>

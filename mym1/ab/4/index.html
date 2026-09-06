@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/B Test 4 | The DSO Slayer | Cassidy Torrey & Manifest Media</title>
+  <meta name="description" content="A/B Variation 4: Defeat Corporate PE Chains. Empowering independent dental practices to reclaim their community. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/theme-cinematic.css">
+  <link rel="stylesheet" href="../../css/theme-clinical.css">
+  <link rel="stylesheet" href="../../css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#0e0608] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data Scripts -->
+  <script src="../../js/data/caseStudies.js"></script>
+  <script src="../../js/data/fivePs.js"></script>
+  <script src="../../js/data/bioTimeline.js"></script>
+  <script src="../../js/data/competitorComparison.js"></script>
+  <script src="../../js/data/faqItems.js"></script>
+  <script src="../../js/data/podcastData.js"></script>
+  <script src="../../js/data/synergiesData.js"></script>
+  <script src="../../js/data/calculatorPresets.js"></script>
+  <script src="../../js/data/testimonials.js"></script>
+  <script src="../../js/data/pressClips.js"></script>
+
+  <!-- Utils Scripts -->
+  <script src="../../js/utils/formatters.js"></script>
+  <script src="../../js/utils/analytics.js"></script>
+  <script src="../../js/utils/abTesting.js"></script>
+  <script src="../../js/utils/schemaGenerator.js"></script>
+
+  <!-- Component Scripts -->
+  <script src="../../js/components/MoneyManifestationBanner.js"></script>
+  <script src="../../js/components/Navbar.js"></script>
+  <script src="../../js/components/TrustBadgesBar.js"></script>
+  <script src="../../js/components/HeroDsoSlayer.js"></script>
+  <script src="../../js/components/DoctorQuoteCarousel.js"></script>
+  <script src="../../js/components/DsoComparisonTable.js"></script>
+  <script src="../../js/components/FivePsInteractive.js"></script>
+  <script src="../../js/components/CaseStudyCard.js"></script>
+  <script src="../../js/components/CaseStudyGrid.js"></script>
+  <script src="../../js/components/RoiCalculator.js"></script>
+  <script src="../../js/components/IronCladGuaranteeBadge.js"></script>
+  <script src="../../js/components/DisambiguationBanner.js"></script>
+  <script src="../../js/components/LeadCaptureForm.js"></script>
+  <script src="../../js/components/Footer.js"></script>
+  <script src="../../js/components/ABSwitcherFooter.js"></script>
+  <script src="../../js/components/BookingModal.js"></script>
+  <script src="../../js/components/VideoPlayerModal.js"></script>
+  <script src="../../js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function App() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 2, variant: 'ab4' });
+        }, []);
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e('div', { className: 'bg-rose-950 text-rose-300 text-center py-2 px-4 text-xs font-mono font-bold border-b border-rose-500/40' },
+              '⚔️ VARIATION D: THE DSO SLAYER • Testing Anti-Corporate Consolidation & Practice Rescue'
+            ),
+            e(window.MoneyManifestationBanner, { basePath: '../../' }),
+            e(window.Navbar, { basePath: '../../', currentPath: 'ab/4/index.html' }),
+            e(window.HeroDsoSlayer, { basePath: '../../' }),
+            e(window.TrustBadgesBar, { basePath: '../../' }),
+            e(window.DsoComparisonTable, { basePath: '../../' }),
+            e(window.CaseStudyGrid, { basePath: '../../' }),
+            e(window.FivePsInteractive, { basePath: '../../' }),
+            e(window.RoiCalculator, { basePath: '../../' }),
+            e(window.IronCladGuaranteeBadge, { basePath: '../../' }),
+            e(window.DisambiguationBanner, { basePath: '../../' }),
+
+            e('section', { className: 'py-20 bg-slate-950 border-t border-rose-500/20 text-center' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
+                e('div', { className: 'badge-pill bg-rose-950 text-rose-300 border-rose-500/40' }, 'Market Reclamation Strategy'),
+                e('h2', { className: 'text-3xl md:text-4xl text-white font-cinzel' },
+                  'Protect Your Independent Surgical Practice Today'
+                ),
+                e(window.LeadCaptureForm, { basePath: '../../' })
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: '../../' }),
+            e(window.ABSwitcherFooter, { depth: 2, activeId: 'ab4' }),
+            e(window.BookingModal, { basePath: '../../' }),
+            e(window.VideoPlayerModal, { basePath: '../../' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(App));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Disambiguation Protocol | Manifest Media Broker Group</title>
+  <meta name="description" content="Official corporate disambiguation distinguishing Manifest Media Broker Group LLC (Cassidy Torrey) from Manifest.com (Chicago) and Manifest Media Services. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function DisambiguationPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'disambiguation' });
+        }, []);
+
+        var comp = window.COMPETITOR_DISAMBIGUATION || {};
+        var entities = comp.entities || [];
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'disambiguation.html' }),
+
+            // Hero Header
+            e('section', { className: 'py-20 bg-gradient-to-b from-[#18110b] via-[#0d0a07] to-[#07090e] border-b border-amber-500/20 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'badge-pill bg-amber-950 text-amber-300 border-amber-500/40' }, 'Official Intelligence Dossier'),
+                e('h1', { className: 'text-white' },
+                  'Institutional ',
+                  e('span', { className: 'text-amber-400 font-extrabold' }, 'Disambiguation Protocol')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'Disambiguating Cassidy Torrey\'s Manifest Media Broker Group, LLC from similarly named entities in Arizona and nationally.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+            e(window.DisambiguationBanner, { basePath: './' }),
+
+            // Narrative Deep Dive
+            e('section', { className: 'py-16 bg-[#07090e]' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
+                entities.map(function(ent, idx) {
+                  var isOurs = idx === 0;
+                  return e('div', {
+                    key: idx,
+                    className: 'glass-card p-6 md:p-8 space-y-3 ' + (isOurs ? 'border-2 border-yellow-500/50 bg-yellow-950/10' : 'border-slate-800')
+                  },
+                    e('div', { className: 'flex items-center justify-between' },
+                      e('h3', { className: 'text-lg md:text-xl font-bold ' + (isOurs ? 'text-amber-300 font-cinzel' : 'text-white') }, ent.name),
+                      isOurs ? e('span', { className: 'badge-pill text-[10px] bg-yellow-500/20 text-yellow-300' }, 'Our Entity') : e('span', { className: 'text-xs text-slate-500 uppercase' }, 'Distinct Corporate Entity')
+                    ),
+                    e('div', { className: 'text-xs font-mono text-slate-400' }, 'Official Web Domain: ' + ent.domain),
+                    e('div', { className: 'text-xs text-slate-300' }, e('strong', { className: 'text-slate-400' }, 'Leadership: '), ent.leadership),
+                    e('div', { className: 'text-xs text-slate-300' }, e('strong', { className: 'text-slate-400' }, 'Locations: '), ent.locations),
+                    e('div', { className: 'text-xs text-slate-300 leading-relaxed pt-2 border-t border-slate-800/60' }, e('strong', { className: 'text-slate-400' }, 'Operational Mandate: '), ent.scope),
+                    e('div', { className: 'text-xs ' + (isOurs ? 'text-emerald-300 font-semibold' : 'text-amber-200/80') }, e('strong', { className: 'text-slate-400' }, 'Core Differentiation: '), ent.differentiator)
+                  );
+                })
+              )
+            ),
+
+            // Direct Contact Line
+            e('section', { className: 'py-16 bg-slate-950 text-center border-t border-slate-800' },
+              e('div', { className: 'container-custom max-w-2xl mx-auto space-y-4' },
+                e('h3', { className: 'text-xl font-cinzel text-white' }, 'Have Questions Regarding Entity Identity?'),
+                e('p', { className: 'text-xs text-slate-400' },
+                  'Contact Cassidy Torrey directly at Manifest Media Broker Group headquarters in Scottsdale/Mesa, AZ.'
+                ),
+                e('a', { href: 'tel:6036303944', className: 'btn-gold text-xs py-3 px-6' }, 'Call Cassidy Directly: (603) 630-3944')
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(DisambiguationPage));
+    })();
+  </script>
+</body>
+</html>

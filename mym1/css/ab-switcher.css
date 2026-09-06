@@ -1,0 +1,83 @@
+/* A/B Switcher Footer & Dock Deck */
+.ab-switcher-deck {
+  background: linear-gradient(180deg, #0d121c 0%, #06090e 100%);
+  border-top: 2px solid var(--gold-primary);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
+  padding: 1.5rem 1rem;
+  position: relative;
+  z-index: 999;
+}
+
+.ab-variant-card {
+  background: #131a26;
+  border: 1px solid #1f293d;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ab-variant-card:hover {
+  border-color: var(--gold-primary);
+  background: #182233;
+  transform: translateY(-3px);
+}
+
+.ab-variant-card.active {
+  border: 2px solid var(--gold-primary);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(19, 26, 38, 0.95) 100%);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.ab-pill-active {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background: var(--gold-primary);
+  color: #07090e;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.ab-quick-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.ab-quick-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #28354d;
+  background: #0f1522;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ab-quick-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  background: #192336;
+}
+
+.ab-quick-btn.current {
+  background: var(--gold-primary);
+  color: #000;
+  font-weight: 700;
+  border-color: var(--gold-primary);
+}

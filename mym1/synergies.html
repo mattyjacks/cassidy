@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Synergies & Alliances | Arizona Business Management</title>
+  <meta name="description" content="Arizona Business Management alliance: Cassidy Torrey, David Mayorga (Amplus Magnus Optus), Natalie Joy Dolph (NJD Corp), and VIBE Media endorsement. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/CorporateAlliance.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function SynergiesPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'synergies' });
+        }, []);
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'synergies.html' }),
+
+            // Hero Header
+            e('section', { className: 'py-20 bg-gradient-to-b from-[#141b2b] via-[#090e17] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'badge-pill' }, 'Southwest Media Consortium'),
+                e('h1', { className: 'text-white' },
+                  'Strategic Alliances & ',
+                  e('span', { className: 'gold-gradient-text' }, 'Corporate Synergies')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'How Cassidy Torrey and Manifest Media Broker Group collaborate across Arizona Business Management, Amplus Magnus Optus LLC, NJD Corp, and VIBE Media.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+            e(window.CorporateAlliance, { basePath: './' }),
+
+            // Narrative Section
+            e('section', { className: 'py-16 bg-[#07090e]' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
+                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 gold-border-glow' },
+                  e('h2', { className: 'text-2xl font-cinzel text-white font-bold' }, 'Expansion Beyond Dentistry: End-to-End Media Solutions'),
+                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                    'While the dental implant niche represents a highly lucrative, quantifiable success for Torrey, his operations as a media broker extend into broader business management and commercial consulting. Manifest Media Broker Group does not operate in isolation; it functions as part of a synergistic ecosystem of Arizona-based corporate entities designed to provide end-to-end media solutions for a variety of enterprises.'
+                  ),
+                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                    'Under Arizona Business Management, Torrey partners alongside David Mayorga of Amplus Magnus Optus LLC and Natalie Joy Dolph of NJD Corp. This alliance brokers comprehensive media packages outside medicine: short television commercials, highly tailored social media cuts, and ultra-high-resolution still ads optimized for print and digital billboards.'
+                  )
+                )
+              )
+            ),
+
+            e(window.DisambiguationBanner, { basePath: './' }),
+
+            // Booking Form
+            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
+                e('div', { className: 'badge-pill' }, 'Commercial Media Brokerage'),
+                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Inquire About Enterprise Media Brokerage'),
+                e(window.LeadCaptureForm, { basePath: './' })
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(SynergiesPage));
+    })();
+  </script>
+</body>
+</html>

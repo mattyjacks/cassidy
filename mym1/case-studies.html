@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Case Studies | 347+ Practices Scaled | Manifest Media Broker Group</title>
+  <meta name="description" content="Verified clinical case studies and financial metrics across 347+ dental practices. Documented 7X to 10X ROAS within 90 days. Cassidy Torrey. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/DoctorQuoteCarousel.js"></script>
+  <script src="./js/components/CaseStudyCard.js"></script>
+  <script src="./js/components/CaseStudyGrid.js"></script>
+  <script src="./js/components/RoiCalculator.js"></script>
+  <script src="./js/components/IronCladGuaranteeBadge.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function CaseStudiesPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'case-studies' });
+        }, []);
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'case-studies.html' }),
+
+            // Hero Header
+            e('section', { className: 'py-20 bg-gradient-to-b from-[#0e1726] via-[#080b12] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+              e('div', { className: 'spotlight-gold' }),
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4 relative z-10' },
+                e('div', { className: 'badge-pill' }, 'Empirical Proof & Verified ROI'),
+                e('h1', { className: 'text-white' },
+                  'Documented Case Studies Across ',
+                  e('span', { className: 'gold-gradient-text' }, '347+ Practices')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'Real surgical practices. Real verified financial windfalls. See the tangible outcomes when commodity marketing is replaced with Cassidy Torrey\'s 5 P\'s Framework.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+            e(window.CaseStudyGrid, { basePath: './' }),
+
+            e('section', { className: 'py-16 bg-[#090e18] border-y border-slate-800' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto' },
+                e(window.DoctorQuoteCarousel, { basePath: './' })
+              )
+            ),
+
+            e(window.RoiCalculator, { basePath: './' }),
+            e(window.IronCladGuaranteeBadge, { basePath: './' }),
+            e(window.DisambiguationBanner, { basePath: './' }),
+
+            // Booking
+            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
+                e('div', { className: 'badge-pill' }, 'Replicate These Results'),
+                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Audit Your Practice Market'),
+                e(window.LeadCaptureForm, { basePath: './' })
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(CaseStudiesPage));
+    })();
+  </script>
+</body>
+</html>

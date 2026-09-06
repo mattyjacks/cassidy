@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Manifest Media Broker Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+  <div id="root"></div>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    (function() {
+      var e = React.createElement;
+      function PrivacyPage() {
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.Navbar, { basePath: './', currentPath: 'privacy.html' }),
+            e('main', { className: 'container-custom max-w-4xl mx-auto py-16 space-y-6 text-slate-300 text-sm leading-relaxed' },
+              e('h1', { className: 'text-3xl font-cinzel text-white font-bold' }, 'Privacy Policy'),
+              e('p', { className: 'text-xs text-amber-300' }, 'Effective Date: Current Calendar Year • Manifest Media Broker Group, LLC'),
+              e('p', null, 'Manifest Media Broker Group, LLC ("Manifest Media", "we", "our") respects the privacy of our clinical partners, surgical doctors, and prospective patients. This Privacy Policy governs the collection, processing, and protection of information obtained through our digital properties and media production engagements.'),
+              e('h2', { className: 'text-xl font-bold text-white pt-4' }, '1. Clinical and Patient Data Protection'),
+              e('p', null, 'We strictly adhere to medical confidentiality standards and HIPAA guidelines. Any patient testimonials, before-and-after cinematography, and surgical documentation filmed on-location are captured exclusively pursuant to fully executed, legally binding patient release forms and authorization waivers.'),
+              e('h2', { className: 'text-xl font-bold text-white pt-4' }, '2. Prohibition on Overseas Data Transfer'),
+              e('p', null, 'Unlike commodity advertising agencies that export client data, contact lists, and footage to offshore sub-contractors, all media processing, video editing, and patient inquiry management remain 100% within the United States under verified American personnel.'),
+              e('h2', { className: 'text-xl font-bold text-white pt-4' }, '3. Direct Dial & Contact'),
+              e('p', null, 'For privacy inquiries, contact Cassidy Torrey directly at (603) 630-3944 or by mail at Scottsdale/Mesa, Arizona.')
+            )
+          ),
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' })
+          )
+        );
+      }
+      ReactDOM.createRoot(document.getElementById('root')).render(e(PrivacyPage));
+    })();
+  </script>
+</body>
+</html>

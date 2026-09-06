@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Transformations Gallery | Manifest Media Broker Group</title>
+  <meta name="description" content="Interactive drag-and-reveal before and after dental implant transformations. High-translucency zirconia, immediate load, and aesthetic zonework. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/beforeAfterData.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/InteractiveClinicalSlider.js"></script>
+  <script src="./js/components/CaseStudyGrid.js"></script>
+  <script src="./js/components/IronCladGuaranteeBadge.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function BeforeAfterPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'before-after' });
+        }, []);
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'before-after.html' }),
+
+            e('section', { className: 'py-16 bg-gradient-to-b from-[#0d1624] via-[#080d14] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'badge-pill' }, 'Verified Clinical Masterworks'),
+                e('h1', { className: 'text-white' },
+                  'Cinematic ',
+                  e('span', { className: 'gold-gradient-text' }, 'Transformations Gallery')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'Experience the profound contrast between failing terminal dentition and high-translucency monolithic zirconia restorations filmed by our American crews.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+            e(window.InteractiveClinicalSlider, { basePath: './' }),
+            e(window.CaseStudyGrid, { basePath: './' }),
+            e(window.IronCladGuaranteeBadge, { basePath: './' }),
+            e(window.DisambiguationBanner, { basePath: './' })
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(BeforeAfterPage));
+    })();
+  </script>
+</body>
+</html>

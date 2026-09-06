@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="#061811" stroke="url(#gGreen)" stroke-width="2.5"/>
+  <path d="M50 20 L68 28 L68 46 C68 60 50 72 50 72 C50 72 32 60 32 46 L32 28 Z" stroke="url(#gGreen)" stroke-width="2" fill="#042F1A"/>
+  <path d="M42 46 L47 52 L58 38" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="80" font-family="'Montserrat', sans-serif" font-size="6.5" font-weight="700" letter-spacing="1" fill="#A7F3D0" text-anchor="middle">HIPAA SECURE</text>
+  <text x="50" y="87" font-family="'Montserrat', sans-serif" font-size="5" font-weight="500" letter-spacing="0.5" fill="#6EE7B7" text-anchor="middle">PATIENT PRIVACY</text>
+</svg>

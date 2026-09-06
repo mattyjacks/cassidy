@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | Manifest Media Broker Group</title>
+  <meta name="description" content="Common questions on Cassidy Torrey's 90-Day Guarantee, on-location American film crews, dental implant marketing, and pricing. (603) 630-3944.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/theme-cinematic.css">
+  <link rel="stylesheet" href="./css/theme-clinical.css">
+  <link rel="stylesheet" href="./css/ab-switcher.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#07090e] text-slate-100">
+
+  <div id="root"></div>
+
+  <!-- Data & Utils -->
+  <script src="./js/data/caseStudies.js"></script>
+  <script src="./js/data/fivePs.js"></script>
+  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
+  <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/podcastData.js"></script>
+  <script src="./js/data/synergiesData.js"></script>
+  <script src="./js/data/calculatorPresets.js"></script>
+  <script src="./js/data/testimonials.js"></script>
+  <script src="./js/data/pressClips.js"></script>
+  <script src="./js/utils/formatters.js"></script>
+  <script src="./js/utils/analytics.js"></script>
+  <script src="./js/utils/abTesting.js"></script>
+  <script src="./js/utils/schemaGenerator.js"></script>
+
+  <!-- Components -->
+  <script src="./js/components/MoneyManifestationBanner.js"></script>
+  <script src="./js/components/Navbar.js"></script>
+  <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/IronCladGuaranteeBadge.js"></script>
+  <script src="./js/components/DisambiguationBanner.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
+  <script src="./js/components/Footer.js"></script>
+  <script src="./js/components/ABSwitcherFooter.js"></script>
+  <script src="./js/components/BookingModal.js"></script>
+  <script src="./js/components/VideoPlayerModal.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function() {
+      var e = React.createElement;
+
+      function FaqPage() {
+        React.useEffect(function() {
+          window.initManifestApp({ depth: 0, variant: 'faq' });
+        }, []);
+
+        var faq = window.FAQ_ITEMS || [];
+        var [openIdx, setOpenIdx] = React.useState(null);
+
+        return e('div', { className: 'min-h-screen flex flex-col justify-between' },
+          e('div', null,
+            e(window.MoneyManifestationBanner, { basePath: './' }),
+            e(window.Navbar, { basePath: './', currentPath: 'faq.html' }),
+
+            // Hero Header
+            e('section', { className: 'py-20 bg-gradient-to-b from-[#0f172a] via-[#090e17] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'badge-pill' }, 'Clarity & Verification'),
+                e('h1', { className: 'text-white' },
+                  'Frequently Asked ',
+                  e('span', { className: 'gold-gradient-text' }, 'Questions')
+                ),
+                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                  'Everything you need to know about our clinical media brokerage, on-location production logistics, guarantee terms, and financial models.'
+                )
+              )
+            ),
+
+            e(window.TrustBadgesBar, { basePath: './' }),
+
+            // Accordion List
+            e('section', { className: 'py-16 bg-[#07090e]' },
+              e('div', { className: 'container-custom max-w-3xl mx-auto space-y-4' },
+                faq.map(function(item, idx) {
+                  var isOpen = openIdx === idx;
+                  return e('div', {
+                    key: idx,
+                    className: 'glass-card overflow-hidden border border-slate-800 transition ' + (isOpen ? 'border-yellow-500/50 bg-slate-900/90' : '')
+                  },
+                    e('button', {
+                      onClick: function() { setOpenIdx(isOpen ? null : idx); },
+                      className: 'w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none'
+                    },
+                      e('div', null,
+                        e('div', { className: 'text-[10px] uppercase font-bold text-amber-300 font-mono tracking-wider mb-1' }, item.category),
+                        e('h3', { className: 'text-base md:text-lg font-bold text-white' }, item.question)
+                      ),
+                      e('span', { className: 'text-yellow-400 font-mono text-xl font-bold shrink-0' }, isOpen ? '−' : '+')
+                    ),
+                    isOpen ? e('div', { className: 'px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4' },
+                      item.answer
+                    ) : null
+                  );
+                })
+              )
+            ),
+
+            e(window.IronCladGuaranteeBadge, { basePath: './' }),
+            e(window.DisambiguationBanner, { basePath: './' }),
+
+            // Booking Form
+            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
+                e('div', { className: 'badge-pill' }, 'Have Another Question?'),
+                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Speak Directly With Cassidy Torrey'),
+                e('p', { className: 'text-xs text-slate-400' }, 'Direct Call: (603) 630-3944 • Scottsdale / Mesa, Arizona'),
+                e(window.LeadCaptureForm, { basePath: './' })
+              )
+            )
+          ),
+
+          e('div', null,
+            e(window.Footer, { basePath: './' }),
+            e(window.ABSwitcherFooter, { depth: 0, activeId: 'master' }),
+            e(window.BookingModal, { basePath: './' }),
+            e(window.VideoPlayerModal, { basePath: './' })
+          )
+        );
+      }
+
+      var root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(e(FaqPage));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* Theme Cinematic: Dark Room, Anamorphic 2.39:1 styling, Film Grain & Gold Letterbox Accents */
+.cinematic-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-aspect {
+  aspect-ratio: 21 / 9;
+  position: relative;
+  background: #05070a;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cinematic-aspect {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(5, 8, 14, 0.85) 100%),
+              linear-gradient(to top, rgba(5, 8, 14, 0.95) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.film-reel-border {
+  border-top: 2px dashed rgba(212, 175, 55, 0.4);
+  border-bottom: 2px dashed rgba(212, 175, 55, 0.4);
+  padding: 1rem 0;
+}
+
+.spotlight-gold {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
