@@ -4,71 +4,68 @@
   window.HeroDsoSlayer = function(props) {
     var basePath = props.basePath || "";
 
-    return e('section', { className: 'relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-[#1c0d12] via-[#0e080b] to-[#07090e]' },
+    return e('section', { className: 'relative pt-16 pb-20 bg-gradient-to-b from-slate-100 via-white to-slate-50 border-b border-slate-200' },
       e('div', { className: 'container-custom relative z-10' },
         e('div', { className: 'max-w-4xl mx-auto text-center space-y-6' },
-          // Top pill
-          e('div', { className: 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-rose-500/40 bg-rose-950/60 text-rose-300 text-xs font-semibold tracking-wider uppercase' },
-            e('span', { className: 'w-2 h-2 rounded-full bg-rose-500 animate-pulse' }),
-            'The Independent Practice Defense: Defeating Private-Equity DSO Monopolies'
+          e('div', { className: 'inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300 bg-white text-slate-800 text-xs font-semibold tracking-wide' },
+            e('span', { className: 'w-2 h-2 rounded-full bg-blue-700' }),
+            'The Independent Practice Defense: Countering Private-Equity DSO Consolidation'
           ),
 
-          // Main Headline
-          e('h1', { className: 'text-white tracking-tight leading-tight' },
-            'Stop Losing High-Ticket Implant Patients to ',
-            e('span', { className: 'text-rose-400 font-extrabold' }, 'Corporate Dental Chains'),
+          e('h1', { className: 'text-slate-950 tracking-tight leading-tight text-3xl sm:text-4xl lg:text-5xl font-extrabold' },
+            'Stop Losing High-Ticket Patients to ',
+            e('span', { className: 'text-blue-700' }, 'Corporate Dental Chains'),
             '.'
           ),
 
-          // Subheadline
-          e('p', { className: 'text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed' },
-            'Private-equity DSOs are flooding your community with cheap retail ads, commoditizing surgery, and stealing your chairs. Generic marketing agencies can\'t stop them. Cassidy Torrey gives independent practices the ',
-            e('strong', { className: 'text-amber-300' }, 'cinematic storytelling firepower'),
+          e('p', { className: 'text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed' },
+            'Private-equity DSOs are flooding your community with generic advertising, commoditizing surgery, and stealing your chairs. Generic digital agencies cannot stop them. Cassidy Torrey gives independent practices the ',
+            e('strong', { className: 'text-slate-900 font-semibold' }, 'cinematic storytelling authority'),
             ' to expose corporate chains as soulless mills and capture high-paying surgical patients.'
           ),
 
-          // David vs Goliath Box
-          e('div', { className: 'p-6 rounded-xl border border-rose-500/30 bg-slate-900/80 max-w-2xl mx-auto text-left' },
-            e('div', { className: 'flex items-center justify-between border-b border-slate-800 pb-3 mb-3' },
-              e('span', { className: 'text-xs uppercase font-bold text-rose-400 tracking-wider' }, 'Corporate DSO Tactics:'),
-              e('span', { className: 'text-xs uppercase font-bold text-emerald-400 tracking-wider' }, 'The Manifest Media Antidote:')
+          // Tactical Comparison Box
+          e('div', { className: 'p-6 sm:p-8 rounded-xl border border-slate-200 bg-white max-w-2xl mx-auto text-left shadow-sm' },
+            e('div', { className: 'flex items-center justify-between border-b border-slate-200 pb-3 mb-3' },
+              e('span', { className: 'text-xs uppercase font-bold text-red-600 tracking-wider' }, 'Corporate DSO Pitfalls:'),
+              e('span', { className: 'text-xs uppercase font-bold text-blue-700 tracking-wider' }, 'The Manifest Media Solution:')
             ),
-            e('div', { className: 'grid grid-cols-2 gap-4 text-xs text-slate-300' },
-              e('div', { className: 'space-y-1.5 text-slate-400' },
-                e('div', null, '❌ Sterile stock photos & actors'),
-                e('div', null, '❌ 10-minute rushed consultations'),
-                e('div', null, '❌ Bait-and-switch implant pricing'),
-                e('div', null, '❌ High churn corporate staff')
+            e('div', { className: 'grid grid-cols-2 gap-4 text-xs' },
+              e('div', { className: 'space-y-2 text-slate-500' },
+                e('div', null, '✕ Rushed 10-minute throughput'),
+                e('div', null, '✕ Bait-and-switch implant pricing'),
+                e('div', null, '✕ Stock photos & generic actors'),
+                e('div', null, '✕ High staff turnover')
               ),
-              e('div', { className: 'space-y-1.5 text-amber-200 font-medium' },
-                e('div', null, '✓ Authentic cinematic doctor stories'),
-                e('div', null, '✓ Real local patients crying tears of joy'),
-                e('div', null, '✓ Transparent surgical fee presentation'),
+              e('div', { className: 'space-y-2 text-slate-800 font-medium' },
+                e('div', null, '✓ Authentic doctor life story'),
+                e('div', null, '✓ Transparent surgical fee schedules'),
+                e('div', null, '✓ Real local patients on camera'),
                 e('div', null, '✓ 90-Day Guaranteed Patient Fill')
               )
             )
           ),
 
           // CTAs
-          e('div', { className: 'pt-4 flex flex-col sm:flex-row items-center justify-center gap-4' },
+          e('div', { className: 'pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5' },
             e('button', {
               onClick: function() {
                 if (window.openBookingModal) window.openBookingModal();
                 else window.location.href = basePath + 'strategy-session.html';
               },
-              className: 'btn-gold w-full sm:w-auto text-sm px-8 py-4 shadow-lg'
+              className: 'btn-blue w-full sm:w-auto text-sm px-8 py-3.5 shadow-sm'
             },
               e('span', null, 'Reclaim Your Local Market (Free Strategy Call)'),
-              e('span', { className: 'text-xs opacity-90' }, '→')
+              e('span', { className: 'text-xs opacity-80' }, '→')
             ),
             e('a', {
               href: basePath + 'case-studies.html',
-              className: 'btn-gold-outline w-full sm:w-auto text-sm px-6 py-4'
+              className: 'btn-blue-outline w-full sm:w-auto text-sm px-6 py-3.5'
             }, 'See How 347+ Practices Won')
           ),
 
-          e('div', { className: 'pt-4 text-xs text-slate-400' },
-            'Direct Access to Cassidy Torrey • Direct Phone: (603) 630-3944'
+          e('div', { className: 'pt-4 text-xs text-slate-500 font-medium' },
+            'Direct Access to Cassidy Torrey • Direct Line: (603) 630-3944'
           )
         )
       )

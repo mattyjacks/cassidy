@@ -18,16 +18,16 @@
       setSliderPos(pos);
     };
 
-    return e('section', { id: 'clinical-transformations', className: 'py-20 bg-gradient-to-b from-[#080b11] via-[#0d1424] to-[#080b11] border-t border-slate-800' },
+    return e('section', { id: 'clinical-transformations', className: 'py-20 bg-white border-t border-slate-200' },
       e('div', { className: 'container-custom' },
         e('div', { className: 'max-w-3xl mx-auto text-center space-y-4 mb-12' },
           e('div', { className: 'badge-pill' }, 'Interactive Clinical Before & After'),
-          e('h2', { className: 'text-white' },
+          e('h2', { className: 'text-slate-950' },
             'Visual Proof That Bypasses ',
-            e('span', { className: 'gold-gradient-text' }, 'Patient Skepticism')
+            e('span', { className: 'text-blue-700' }, 'Patient Skepticism')
           ),
-          e('p', { className: 'text-slate-400 text-sm md:text-base leading-relaxed' },
-            'Drag the golden divider to experience how our on-location American cinema crews capture full surgical transformations and emotional life turnarounds.'
+          e('p', { className: 'text-slate-600 text-sm sm:text-base leading-relaxed' },
+            'Drag the blue divider to experience how our on-location American cinema crews capture full surgical transformations and emotional life turnarounds.'
           )
         ),
 
@@ -38,10 +38,10 @@
             return e('button', {
               key: c.id,
               onClick: function() { setActiveCaseIdx(i); setSliderPos(50); },
-              className: 'px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition ' +
+              className: 'px-4 py-2 rounded-lg text-xs font-bold tracking-wide transition ' +
                 (isSelected ?
-                  'bg-yellow-500 text-black font-extrabold shadow-lg' :
-                  'bg-slate-900 text-slate-400 hover:text-white border border-slate-800')
+                  'bg-blue-800 text-white shadow-sm' :
+                  'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200')
             },
               c.patientName.split(',')[0] + ' (' + c.procedure.split('(')[0].trim() + ')'
             );
@@ -49,12 +49,12 @@
         ),
 
         // Slider Container
-        e('div', { className: 'glass-card-premium p-6 md:p-10 max-w-4xl mx-auto gold-border-glow' },
+        e('div', { className: 'clean-card p-6 sm:p-10 max-w-4xl mx-auto border-slate-200 shadow-sm' },
           e('div', { className: 'grid grid-cols-1 lg:grid-cols-12 gap-8 items-center' },
             // Visual slider box (7 cols)
             e('div', { className: 'lg:col-span-7' },
               e('div', {
-                className: 'relative aspect-[16/10] rounded-xl overflow-hidden select-none cursor-ew-resize border border-yellow-500/30 bg-black shadow-2xl',
+                className: 'relative aspect-[16/10] rounded-xl overflow-hidden select-none cursor-ew-resize border border-slate-300 bg-slate-100 shadow-inner',
                 onMouseDown: function(ev) {
                   setIsDragging(true);
                   var rect = ev.currentTarget.getBoundingClientRect();
@@ -75,64 +75,64 @@
                   }
                 }
               },
-                // After View (Background)
-                e('div', { className: 'absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-950/40 to-slate-950 flex flex-col justify-between p-6 text-right' },
-                  e('div', { className: 'inline-block self-end px-3 py-1 rounded bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-xs font-bold uppercase' },
-                    'AFTER: Restored Surgical Masterwork'
+                // After View (Background: Clean White/Blue)
+                e('div', { className: 'absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-slate-100 flex flex-col justify-between p-6 text-right' },
+                  e('div', { className: 'inline-block self-end px-3 py-1 rounded bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold uppercase' },
+                    'AFTER: Restored Surgical Case'
                   ),
                   e('div', { className: 'space-y-1' },
-                    e('div', { className: 'text-white font-bold text-base font-cinzel' }, 'Full Functional Restitution'),
-                    e('div', { className: 'text-xs text-emerald-200/90' }, currentCase.afterImageNote)
+                    e('div', { className: 'text-slate-900 font-bold text-base' }, 'Full Functional Restitution'),
+                    e('div', { className: 'text-xs text-slate-600' }, currentCase.afterImageNote)
                   )
                 ),
 
-                // Before View (Clipped on top)
+                // Before View (Clipped on top: Subtle Gray/Warm)
                 e('div', {
-                  className: 'absolute inset-0 bg-gradient-to-br from-red-950/60 via-slate-950 to-slate-900 flex flex-col justify-between p-6 border-r-2 border-yellow-400 overflow-hidden',
+                  className: 'absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-amber-50/30 flex flex-col justify-between p-6 border-r-2 border-blue-600 overflow-hidden',
                   style: { width: sliderPos + '%' }
                 },
-                  e('div', { className: 'inline-block self-start px-3 py-1 rounded bg-red-500/20 border border-red-500 text-red-300 text-xs font-bold uppercase whitespace-nowrap' },
+                  e('div', { className: 'inline-block self-start px-3 py-1 rounded bg-red-50 border border-red-300 text-red-800 text-xs font-bold uppercase whitespace-nowrap' },
                     'BEFORE: Clinical Breakdown'
                   ),
                   e('div', { className: 'space-y-1 whitespace-nowrap' },
-                    e('div', { className: 'text-white font-bold text-base font-cinzel' }, 'Severe Chewing Impairment'),
-                    e('div', { className: 'text-xs text-red-200/90' }, currentCase.beforeImageNote)
+                    e('div', { className: 'text-slate-900 font-bold text-base' }, 'Chewing Impairment & Anxiety'),
+                    e('div', { className: 'text-xs text-slate-600' }, currentCase.beforeImageNote)
                   )
                 ),
 
                 // Drag Handle
                 e('div', {
-                  className: 'absolute top-0 bottom-0 w-1 bg-yellow-400 pointer-events-none flex items-center justify-center',
+                  className: 'absolute top-0 bottom-0 w-1 bg-blue-600 pointer-events-none flex items-center justify-center',
                   style: { left: sliderPos + '%' }
                 },
-                  e('div', { className: 'w-8 h-8 rounded-full bg-yellow-400 text-black font-extrabold text-xs flex items-center justify-center shadow-2xl border-2 border-slate-900' },
+                  e('div', { className: 'w-7 h-7 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md border-2 border-white' },
                     '↔'
                   )
                 )
               ),
-              e('div', { className: 'text-center text-[11px] text-slate-400 mt-2 italic' },
-                '← Drag golden handle to reveal Before & After transformation →'
+              e('div', { className: 'text-center text-xs text-slate-500 mt-2.5 font-medium' },
+                '← Drag divider horizontally to compare Before & After →'
               )
             ),
 
             // Clinical Case Details (5 cols)
             e('div', { className: 'lg:col-span-5 space-y-4 text-left' },
               e('div', { className: 'flex items-center justify-between' },
-                e('span', { className: 'badge-pill text-[10px]' }, currentCase.patientName),
-                e('span', { className: 'text-sm font-extrabold text-emerald-400 font-mono' }, 'Case Value: ' + currentCase.caseValue)
+                e('span', { className: 'badge-pill text-[11px]' }, currentCase.patientName),
+                e('span', { className: 'text-sm font-extrabold text-blue-800 font-sans' }, 'Case Value: ' + currentCase.caseValue)
               ),
-              e('h3', { className: 'text-xl font-bold text-white font-cinzel' }, currentCase.procedure),
-              e('div', { className: 'text-xs text-amber-300 font-semibold' }, currentCase.clinic),
+              e('h3', { className: 'text-xl font-bold text-slate-900' }, currentCase.procedure),
+              e('div', { className: 'text-xs text-blue-700 font-semibold' }, currentCase.clinic),
               
-              e('p', { className: 'text-xs text-slate-300 italic leading-relaxed p-3 rounded bg-slate-900 border border-slate-800' },
+              e('blockquote', { className: 'text-xs text-slate-700 font-editorial italic leading-relaxed p-3.5 rounded-lg bg-slate-50 border border-slate-200' },
                 '“' + currentCase.cinematicStory + '”'
               ),
 
-              e('div', { className: 'space-y-1 text-xs' },
-                e('div', { className: 'font-bold uppercase text-slate-400 text-[10px] tracking-wider' }, 'Surgical Protocol:'),
+              e('div', { className: 'space-y-1.5 text-xs' },
+                e('div', { className: 'font-bold uppercase text-slate-500 text-[10px] tracking-wider' }, 'Surgical Milestones:'),
                 currentCase.clinicalMilestones.map(function(m, idx) {
-                  return e('div', { key: idx, className: 'flex items-start gap-1.5 text-slate-300 text-[11px]' },
-                    e('span', { className: 'text-emerald-400' }, '•'),
+                  return e('div', { key: idx, className: 'flex items-start gap-1.5 text-slate-700 text-xs' },
+                    e('span', { className: 'text-blue-700' }, '•'),
                     e('span', null, m)
                   );
                 })
@@ -143,7 +143,7 @@
                   if (window.openBookingModal) window.openBookingModal();
                   else window.location.href = basePath + 'strategy-session.html';
                 },
-                className: 'btn-gold text-xs py-3 w-full shadow-lg mt-2'
+                className: 'btn-blue text-xs py-3 w-full shadow-sm mt-2'
               }, 'Feature Your Clinical Cases with Manifest Media')
             )
           )

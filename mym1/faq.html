@@ -20,16 +20,15 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
   <!-- Data & Utils -->
   <script src="./js/data/caseStudies.js"></script>
   <script src="./js/data/fivePs.js"></script>
-  <script src="./js/data/bioTimeline.js"></script>
-  <script src="./js/data/competitorComparison.js"></script>
   <script src="./js/data/faqItems.js"></script>
+  <script src="./js/data/competitorComparison.js"></script>
   <script src="./js/data/podcastData.js"></script>
   <script src="./js/data/synergiesData.js"></script>
   <script src="./js/data/calculatorPresets.js"></script>
@@ -71,14 +70,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'faq.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#0f172a] via-[#090e17] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill' }, 'Clarity & Verification'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Clarity & Verification'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Frequently Asked ',
-                  e('span', { className: 'gold-gradient-text' }, 'Questions')
+                  e('span', { className: 'text-blue-600' }, 'Questions')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Everything you need to know about our clinical media brokerage, on-location production logistics, guarantee terms, and financial models.'
                 )
               )
@@ -87,25 +86,25 @@
             e(window.TrustBadgesBar, { basePath: './' }),
 
             // Accordion List
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-3xl mx-auto space-y-4' },
                 faq.map(function(item, idx) {
                   var isOpen = openIdx === idx;
                   return e('div', {
                     key: idx,
-                    className: 'glass-card overflow-hidden border border-slate-800 transition ' + (isOpen ? 'border-yellow-500/50 bg-slate-900/90' : '')
+                    className: 'bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition ' + (isOpen ? 'border-blue-600 ring-1 ring-blue-600/20' : '')
                   },
                     e('button', {
                       onClick: function() { setOpenIdx(isOpen ? null : idx); },
                       className: 'w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none'
                     },
                       e('div', null,
-                        e('div', { className: 'text-[10px] uppercase font-bold text-amber-300 font-mono tracking-wider mb-1' }, item.category),
-                        e('h3', { className: 'text-base md:text-lg font-bold text-white' }, item.question)
+                        e('div', { className: 'text-[11px] uppercase font-bold text-blue-800 font-mono tracking-wider mb-1' }, item.category),
+                        e('h3', { className: 'text-base md:text-lg font-bold text-slate-900 font-newsreader' }, item.question)
                       ),
-                      e('span', { className: 'text-yellow-400 font-mono text-xl font-bold shrink-0' }, isOpen ? '−' : '+')
+                      e('span', { className: 'text-blue-600 font-mono text-xl font-bold shrink-0' }, isOpen ? '−' : '+')
                     ),
-                    isOpen ? e('div', { className: 'px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4' },
+                    isOpen ? e('div', { className: 'px-6 pb-6 text-sm text-slate-700 leading-relaxed border-t border-slate-100 pt-4' },
                       item.answer
                     ) : null
                   );
@@ -117,11 +116,11 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Have Another Question?'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Speak Directly With Cassidy Torrey'),
-                e('p', { className: 'text-xs text-slate-400' }, 'Direct Call: (603) 630-3944 • Scottsdale / Mesa, Arizona'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Have Another Question?'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Speak Directly With Cassidy Torrey'),
+                e('p', { className: 'text-sm text-slate-600' }, 'Direct Call: (603) 630-3944 • Scottsdale / Mesa, Arizona'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

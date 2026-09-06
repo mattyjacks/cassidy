@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -45,7 +45,6 @@
   <script src="./js/components/Navbar.js"></script>
   <script src="./js/components/TrustBadgesBar.js"></script>
   <script src="./js/components/DisambiguationBanner.js"></script>
-  <script src="./js/components/LeadCaptureForm.js"></script>
   <script src="./js/components/Footer.js"></script>
   <script src="./js/components/ABSwitcherFooter.js"></script>
   <script src="./js/components/BookingModal.js"></script>
@@ -70,14 +69,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'disambiguation.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#18110b] via-[#0d0a07] to-[#07090e] border-b border-amber-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill bg-amber-950 text-amber-300 border-amber-500/40' }, 'Official Intelligence Dossier'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Official Intelligence Dossier'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Institutional ',
-                  e('span', { className: 'text-amber-400 font-extrabold' }, 'Disambiguation Protocol')
+                  e('span', { className: 'text-blue-600 font-extrabold' }, 'Disambiguation Protocol')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Disambiguating Cassidy Torrey\'s Manifest Media Broker Group, LLC from similarly named entities in Arizona and nationally.'
                 )
               )
@@ -87,36 +86,36 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Narrative Deep Dive
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
                 entities.map(function(ent, idx) {
                   var isOurs = idx === 0;
                   return e('div', {
                     key: idx,
-                    className: 'glass-card p-6 md:p-8 space-y-3 ' + (isOurs ? 'border-2 border-yellow-500/50 bg-yellow-950/10' : 'border-slate-800')
+                    className: 'p-6 md:p-8 space-y-3 rounded-xl ' + (isOurs ? 'bg-white border-2 border-blue-600 shadow-md' : 'bg-white border border-slate-200 shadow-sm')
                   },
                     e('div', { className: 'flex items-center justify-between' },
-                      e('h3', { className: 'text-lg md:text-xl font-bold ' + (isOurs ? 'text-amber-300 font-cinzel' : 'text-white') }, ent.name),
-                      isOurs ? e('span', { className: 'badge-pill text-[10px] bg-yellow-500/20 text-yellow-300' }, 'Our Entity') : e('span', { className: 'text-xs text-slate-500 uppercase' }, 'Distinct Corporate Entity')
+                      e('h3', { className: 'text-lg md:text-xl font-bold ' + (isOurs ? 'text-blue-900 font-newsreader' : 'text-slate-900 font-newsreader') }, ent.name),
+                      isOurs ? e('span', { className: 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-100 text-blue-800' }, 'Our Entity') : e('span', { className: 'text-xs text-slate-500 uppercase font-semibold' }, 'Distinct Corporate Entity')
                     ),
-                    e('div', { className: 'text-xs font-mono text-slate-400' }, 'Official Web Domain: ' + ent.domain),
-                    e('div', { className: 'text-xs text-slate-300' }, e('strong', { className: 'text-slate-400' }, 'Leadership: '), ent.leadership),
-                    e('div', { className: 'text-xs text-slate-300' }, e('strong', { className: 'text-slate-400' }, 'Locations: '), ent.locations),
-                    e('div', { className: 'text-xs text-slate-300 leading-relaxed pt-2 border-t border-slate-800/60' }, e('strong', { className: 'text-slate-400' }, 'Operational Mandate: '), ent.scope),
-                    e('div', { className: 'text-xs ' + (isOurs ? 'text-emerald-300 font-semibold' : 'text-amber-200/80') }, e('strong', { className: 'text-slate-400' }, 'Core Differentiation: '), ent.differentiator)
+                    e('div', { className: 'text-xs font-mono text-slate-500' }, 'Official Web Domain: ' + ent.domain),
+                    e('div', { className: 'text-xs text-slate-700' }, e('strong', { className: 'text-slate-900 font-semibold' }, 'Leadership: '), ent.leadership),
+                    e('div', { className: 'text-xs text-slate-700' }, e('strong', { className: 'text-slate-900 font-semibold' }, 'Locations: '), ent.locations),
+                    e('div', { className: 'text-xs text-slate-700 leading-relaxed pt-2 border-t border-slate-100' }, e('strong', { className: 'text-slate-900 font-semibold' }, 'Operational Mandate: '), ent.scope),
+                    e('div', { className: 'text-xs ' + (isOurs ? 'text-blue-700 font-semibold' : 'text-slate-600') }, e('strong', { className: 'text-slate-900 font-semibold' }, 'Core Differentiation: '), ent.differentiator)
                   );
                 })
               )
             ),
 
             // Direct Contact Line
-            e('section', { className: 'py-16 bg-slate-950 text-center border-t border-slate-800' },
+            e('section', { className: 'py-16 bg-white text-center border-t border-slate-200' },
               e('div', { className: 'container-custom max-w-2xl mx-auto space-y-4' },
-                e('h3', { className: 'text-xl font-cinzel text-white' }, 'Have Questions Regarding Entity Identity?'),
-                e('p', { className: 'text-xs text-slate-400' },
+                e('h3', { className: 'text-2xl font-newsreader font-bold text-slate-900' }, 'Have Questions Regarding Entity Identity?'),
+                e('p', { className: 'text-sm text-slate-600' },
                   'Contact Cassidy Torrey directly at Manifest Media Broker Group headquarters in Scottsdale/Mesa, AZ.'
                 ),
-                e('a', { href: 'tel:6036303944', className: 'btn-gold text-xs py-3 px-6' }, 'Call Cassidy Directly: (603) 630-3944')
+                e('a', { href: 'tel:6036303944', className: 'btn-blue inline-block text-xs py-3 px-6' }, 'Call Cassidy Directly: (603) 630-3944')
               )
             )
           ),

@@ -43,40 +43,42 @@
       }
     ];
 
-    return e('section', { id: 'dso-comparison', className: 'py-20 bg-[#07090e] border-t border-slate-800' },
+    return e('section', { id: 'dso-comparison', className: 'py-20 bg-white border-t border-slate-200' },
       e('div', { className: 'container-custom' },
         e('div', { className: 'max-w-3xl mx-auto text-center space-y-4 mb-14' },
-          e('div', { className: 'badge-pill' }, 'Market Intelligence Comparison'),
-          e('h2', { className: 'text-white' },
-            'Why Independent Practices ',
-            e('span', { className: 'gold-gradient-text' }, 'Choose Manifest Media')
+          e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' },
+            'Market Intelligence Comparison'
           ),
-          e('p', { className: 'text-slate-400 text-sm md:text-base leading-relaxed' },
+          e('h2', { className: 'text-3xl md:text-4xl font-extrabold text-slate-900 font-newsreader' },
+            'Why Independent Practices ',
+            e('span', { className: 'text-blue-700' }, 'Choose Manifest Media')
+          ),
+          e('p', { className: 'text-slate-600 text-sm md:text-base leading-relaxed' },
             'Compare our dedicated clinical media brokerage against commodity digital agencies and predatory corporate DSO chains.'
           )
         ),
 
         // Table
-        e('div', { className: 'overflow-x-auto rounded-xl border border-yellow-500/30' },
+        e('div', { className: 'overflow-x-auto rounded-xl border border-slate-200 shadow-sm' },
           e('table', { className: 'w-full text-left border-collapse' },
             e('thead', null,
-              e('tr', { className: 'bg-slate-900 text-xs uppercase font-cinzel text-slate-300' },
-                e('th', { className: 'p-4 border-b border-slate-800 w-1/4' }, 'Strategic Dimension'),
-                e('th', { className: 'p-4 border-b border-slate-800 w-1/4 text-red-300' }, 'Generic Digital Agency'),
-                e('th', { className: 'p-4 border-b border-slate-800 w-1/4 text-slate-400' }, 'Corporate DSO Chains'),
-                e('th', { className: 'p-4 border-b border-yellow-500/50 w-1/4 bg-yellow-950/40 text-amber-300 font-bold' }, 'Manifest Media Broker Group')
+              e('tr', { className: 'bg-slate-50 text-xs uppercase text-slate-700 font-bold' },
+                e('th', { className: 'p-4 border-b border-slate-200 w-1/4' }, 'Strategic Dimension'),
+                e('th', { className: 'p-4 border-b border-slate-200 w-1/4 text-red-700' }, 'Generic Digital Agency'),
+                e('th', { className: 'p-4 border-b border-slate-200 w-1/4 text-slate-600' }, 'Corporate DSO Chains'),
+                e('th', { className: 'p-4 border-b border-blue-200 w-1/4 bg-blue-50/80 text-blue-900 font-bold' }, 'Manifest Media Broker Group')
               )
             ),
             e('tbody', null,
               rows.map(function(r, idx) {
                 return e('tr', {
                   key: idx,
-                  className: 'border-b border-slate-800/80 text-xs hover:bg-slate-900/50 transition'
+                  className: 'border-b border-slate-200 text-xs hover:bg-slate-50/60 transition'
                 },
-                  e('td', { className: 'p-4 font-bold text-white bg-slate-950/50' }, r.dimension),
-                  e('td', { className: 'p-4 text-slate-400 leading-relaxed' }, r.agency),
-                  e('td', { className: 'p-4 text-slate-400 leading-relaxed' }, r.dso),
-                  e('td', { className: 'p-4 text-amber-200 bg-yellow-950/20 font-medium leading-relaxed' }, r.manifest)
+                  e('td', { className: 'p-4 font-bold text-slate-900 bg-slate-50/30' }, r.dimension),
+                  e('td', { className: 'p-4 text-slate-600 leading-relaxed' }, r.agency),
+                  e('td', { className: 'p-4 text-slate-600 leading-relaxed' }, r.dso),
+                  e('td', { className: 'p-4 text-blue-950 bg-blue-50/40 font-medium leading-relaxed' }, r.manifest)
                 );
               })
             )

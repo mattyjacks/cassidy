@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -44,8 +44,11 @@
   <script src="./js/components/MoneyManifestationBanner.js"></script>
   <script src="./js/components/Navbar.js"></script>
   <script src="./js/components/TrustBadgesBar.js"></script>
-  <script src="./js/components/RoiCalculator.js"></script>
+  <script src="./js/components/DoctorQuoteCarousel.js"></script>
+  <script src="./js/components/CaseStudyCard.js"></script>
   <script src="./js/components/CaseStudyGrid.js"></script>
+  <script src="./js/components/RoiCalculator.js"></script>
+  <script src="./js/components/TreatmentAcceptanceModeler.js"></script>
   <script src="./js/components/IronCladGuaranteeBadge.js"></script>
   <script src="./js/components/DisambiguationBanner.js"></script>
   <script src="./js/components/LeadCaptureForm.js"></script>
@@ -70,14 +73,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'calculator.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#111c2e] via-[#09101d] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill' }, 'Empirical Financial Forecasting'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Empirical Financial Forecasting'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Practice Revenue & ',
-                  e('span', { className: 'gold-gradient-text' }, 'Chair Capacity Simulator')
+                  e('span', { className: 'text-blue-600' }, 'Chair Capacity Simulator')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Model your clinical implant return based on historical data across 347+ practices. Discover how many cases you need to achieve 7X to 10X capital efficiency.'
                 )
               )
@@ -87,28 +90,29 @@
             e(window.RoiCalculator, { basePath: './' }),
 
             // Chair Capacity Deep Dive
-            e('section', { className: 'py-16 bg-[#080b12]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
                 e('div', { className: 'text-center space-y-2 mb-8' },
-                  e('h2', { className: 'text-2xl font-cinzel text-white font-bold' }, 'Production Capacity Breakdown by Practice Tier'),
-                  e('p', { className: 'text-xs text-slate-400' }, 'Historical growth observed after deploying the 5 P\'s on-location media assets.')
+                  e('h2', { className: 'text-2xl font-newsreader text-slate-900 font-bold' }, 'Production Capacity Breakdown by Practice Tier'),
+                  e('p', { className: 'text-sm text-slate-600' }, 'Historical growth observed after deploying the 5 P\'s on-location media assets.')
                 ),
 
                 e('div', { className: 'grid grid-cols-1 md:grid-cols-3 gap-6' },
-                  e('div', { className: 'glass-card p-6 space-y-3 gold-border-glow' },
-                    e('div', { className: 'text-xs font-bold text-amber-300 uppercase' }, 'Solo Restorative (3-4 Chairs)'),
-                    e('div', { className: 'text-2xl font-mono font-bold text-white' }, '+$32,000 / mo'),
-                    e('p', { className: 'text-xs text-slate-400 leading-relaxed' }, 'Eliminates 8 unbooked chair slots per week. Requires only 1 single arch case or 3 single implants per month to break even.')
+                  e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm' },
+                    e('div', { className: 'text-xs font-bold text-blue-800 uppercase tracking-wider' }, 'Solo Restorative (3-4 Chairs)'),
+                    e('div', { className: 'text-2xl font-newsreader font-bold text-slate-900' }, '+$32,000 / mo'),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' }, 'Eliminates 8 unbooked chair slots per week. Requires only 1 single arch case or 3 single implants per month to break even.')
                   ),
-                  e('div', { className: 'glass-card p-6 space-y-3 border-yellow-500/40 gold-border-glow' },
-                    e('div', { className: 'text-xs font-bold text-yellow-300 uppercase' }, 'Multi-Doctor Center (5-8 Chairs)'),
-                    e('div', { className: 'text-2xl font-mono font-bold text-emerald-400' }, '+$68,000 / mo'),
-                    e('p', { className: 'text-xs text-slate-400 leading-relaxed' }, 'Fills 16 open slots per week. Typically triggers hiring of 1-2 new hygienists and front-desk coordinators to manage pipeline.')
+                  e('div', { className: 'bg-white rounded-xl border-2 border-blue-600 p-6 space-y-3 shadow-md relative' },
+                    e('div', { className: 'absolute -top-3 right-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider' }, 'Most Common'),
+                    e('div', { className: 'text-xs font-bold text-blue-800 uppercase tracking-wider' }, 'Multi-Doctor Center (5-8 Chairs)'),
+                    e('div', { className: 'text-2xl font-newsreader font-bold text-blue-600' }, '+$68,000 / mo'),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' }, 'Fills 16 open slots per week. Typically triggers hiring of 1-2 new hygienists and front-desk coordinators to manage pipeline.')
                   ),
-                  e('div', { className: 'glass-card p-6 space-y-3 gold-border-glow' },
-                    e('div', { className: 'text-xs font-bold text-sky-300 uppercase' }, 'Surgical / Full-Arch Specialty (8+ Chairs)'),
-                    e('div', { className: 'text-2xl font-mono font-bold text-sky-400' }, '+$145,000 / mo'),
-                    e('p', { className: 'text-xs text-slate-400 leading-relaxed' }, 'Full operatory dominance. Booked 6 to 8 weeks out. Overwhelms local corporate DSO chains.')
+                  e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm' },
+                    e('div', { className: 'text-xs font-bold text-slate-800 uppercase tracking-wider' }, 'Surgical / Full-Arch Specialty (8+ Chairs)'),
+                    e('div', { className: 'text-2xl font-newsreader font-bold text-emerald-600' }, '+$145,000 / mo'),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' }, 'Full operatory dominance. Booked 6 to 8 weeks out. Overwhelms local corporate DSO chains.')
                   )
                 )
               )
@@ -118,10 +122,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Custom Practice Modeling'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Request a Customized ROI Audit'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Custom Practice Modeling'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Request a Customized ROI Audit'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

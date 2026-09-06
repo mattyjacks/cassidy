@@ -27,11 +27,11 @@
         // Bar header with Toggle
         e('div', { className: 'flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800' },
           e('div', { className: 'flex items-center gap-3' },
-            e('span', { className: 'w-3 h-3 rounded-full bg-yellow-400 animate-pulse' }),
-            e('span', { className: 'font-cinzel text-xs uppercase tracking-widest text-amber-300 font-bold' },
+            e('span', { className: 'w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse' }),
+            e('span', { className: 'text-xs uppercase tracking-widest text-slate-200 font-bold' },
               'A/B Testing Conversion Lab & Index Engine'
             ),
-            e('span', { className: 'text-[11px] px-2 py-0.5 rounded bg-yellow-950/80 border border-yellow-500/40 text-yellow-300 font-mono' },
+            e('span', { className: 'text-[11px] px-2 py-0.5 rounded bg-blue-900/60 border border-blue-500/40 text-blue-300 font-mono' },
               'ACTIVE: ' + (currentVariant ? currentVariant.code : 'CONTROL-00')
             )
           ),
@@ -40,7 +40,7 @@
             e('span', { className: 'text-slate-400 hidden sm:inline' }, 'Switch between high-converting index variants:'),
             e('button', {
               onClick: function() { setIsExpanded(!isExpanded); },
-              className: 'text-xs text-yellow-400 hover:text-white px-2 py-1 rounded bg-slate-800 border border-slate-700'
+              className: 'text-xs text-blue-400 hover:text-white px-2.5 py-1 rounded bg-slate-800 border border-slate-700 transition'
             }, isExpanded ? 'Hide Details ▲' : 'Show All Variations ▼')
           )
         ),
@@ -73,16 +73,16 @@
               e('div', null,
                 e('div', { className: 'text-[10px] font-mono font-bold tracking-wider mb-1', style: { color: v.color } }, v.code),
                 e('div', { className: 'text-xs font-bold text-white mb-1 leading-snug' }, v.name),
-                e('div', { className: 'text-[11px] text-amber-200/90 font-medium mb-2 italic leading-tight' }, '“' + v.headline + '”'),
+                e('div', { className: 'text-[11px] text-blue-200 font-medium mb-2 italic leading-tight' }, '“' + v.headline + '”'),
                 e('p', { className: 'text-[10px] text-slate-400 leading-relaxed mb-3' }, v.hypothesis)
               ),
               e('div', { className: 'pt-2 border-t border-slate-800 flex items-center justify-between' },
                 e('span', { className: 'text-[9px] text-slate-500 uppercase tracking-wider' }, 'Target: ' + v.targetVisitor.split(',')[0]),
                 isActive ?
-                  e('span', { className: 'text-[10px] font-bold text-yellow-400' }, 'Viewing') :
+                  e('span', { className: 'text-[10px] font-bold text-blue-400' }, 'Viewing') :
                   e('a', {
                     href: getTargetUrl(v.relativePath),
-                    className: 'text-[10px] font-bold text-amber-300 hover:text-white underline'
+                    className: 'text-[10px] font-bold text-blue-400 hover:text-white underline'
                   }, 'Launch Test →')
               )
             );
@@ -91,7 +91,7 @@
 
         e('div', { className: 'text-center pt-3 text-[11px] text-slate-400' },
           'Engineered for Cassidy Torrey • Manifest Media Broker Group LLC • Direct Booking: ',
-          e('a', { href: 'tel:6036303944', className: 'text-yellow-400 font-bold hover:underline' }, '(603) 630-3944')
+          e('a', { href: 'tel:6036303944', className: 'text-blue-400 font-bold hover:underline' }, '(603) 630-3944')
         )
       )
     );

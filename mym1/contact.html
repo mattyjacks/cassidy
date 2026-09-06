@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -67,14 +67,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'contact.html' }),
 
             // Hero Header
-            e('section', { className: 'py-16 bg-gradient-to-b from-[#141824] via-[#090d16] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill' }, 'Executive Communications'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Executive Communications'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Contact ',
-                  e('span', { className: 'gold-gradient-text' }, 'Manifest Media Broker Group')
+                  e('span', { className: 'text-blue-600' }, 'Manifest Media Broker Group')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Connect directly with Cassidy Torrey. Based in Scottsdale & Mesa, Arizona. Deploying American film crews to clinical operatories nationwide.'
                 )
               )
@@ -83,32 +83,32 @@
             e(window.TrustBadgesBar, { basePath: './' }),
 
             // Contact Info + Form Grid
-            e('section', { className: 'py-16 bg-[#07090e]' },
-              e('div', { className: 'container-custom max-w-4xl mx-auto' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
+              e('div', { className: 'container-custom max-w-5xl mx-auto' },
                 e('div', { className: 'grid grid-cols-1 lg:grid-cols-12 gap-8 items-start' },
                   // Left info cards
                   e('div', { className: 'lg:col-span-5 space-y-4' },
-                    e('div', { className: 'glass-card p-6 space-y-3 gold-border-glow' },
-                      e('div', { className: 'text-xs uppercase font-bold text-amber-300 font-mono tracking-wider' }, 'Direct Telephone Line'),
-                      e('div', { className: 'text-2xl font-bold text-white font-mono' },
-                        e('a', { href: 'tel:6036303944', className: 'hover:text-yellow-400' }, '(603) 630-3944')
+                    e('div', { className: 'bg-white rounded-xl border-2 border-blue-600 p-6 space-y-3 shadow-md' },
+                      e('div', { className: 'text-xs uppercase font-bold text-blue-800 font-mono tracking-wider' }, 'Direct Telephone Line'),
+                      e('div', { className: 'text-2xl font-bold text-slate-900 font-mono' },
+                        e('a', { href: 'tel:6036303944', className: 'hover:text-blue-600' }, '(603) 630-3944')
                       ),
-                      e('p', { className: 'text-xs text-slate-400' }, 'Direct line for clinical practice owners and surgical directors. Mon-Sat 8am-7pm MST.')
+                      e('p', { className: 'text-xs text-slate-600' }, 'Direct line for clinical practice owners and surgical directors. Mon-Sat 8am-7pm MST.')
                     ),
 
-                    e('div', { className: 'glass-card p-6 space-y-3' },
-                      e('div', { className: 'text-xs uppercase font-bold text-amber-300 font-mono tracking-wider' }, 'Corporate Headquarters'),
-                      e('div', { className: 'text-sm font-bold text-white' }, 'Scottsdale & Mesa, Arizona'),
-                      e('p', { className: 'text-xs text-slate-400 leading-relaxed' },
+                    e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm' },
+                      e('div', { className: 'text-xs uppercase font-bold text-slate-800 font-mono tracking-wider' }, 'Corporate Headquarters'),
+                      e('div', { className: 'text-sm font-bold text-slate-900 font-newsreader' }, 'Scottsdale & Mesa, Arizona'),
+                      e('p', { className: 'text-xs text-slate-600 leading-relaxed' },
                         'Serving dental implant practices, surgical centers, and cosmetic practitioners across all 50 US States with zero overseas outsourcing.'
                       )
                     ),
 
-                    e('div', { className: 'glass-card p-6 space-y-3 border-emerald-500/30' },
-                      e('div', { className: 'text-xs uppercase font-bold text-emerald-400 font-mono tracking-wider' }, 'Executive Leadership'),
-                      e('div', { className: 'text-xs text-slate-300 space-y-1' },
-                        e('div', null, e('strong', { className: 'text-white' }, 'Cassidy Torrey: '), 'Owner & Executive Producer'),
-                        e('div', null, e('strong', { className: 'text-white' }, 'Noah Frimer: '), 'Vice President of Distribution (ASU Film & Media)')
+                    e('div', { className: 'bg-white rounded-xl border border-emerald-200 p-6 space-y-3 shadow-sm' },
+                      e('div', { className: 'text-xs uppercase font-bold text-emerald-800 font-mono tracking-wider' }, 'Executive Leadership'),
+                      e('div', { className: 'text-xs text-slate-700 space-y-1.5' },
+                        e('div', null, e('strong', { className: 'text-slate-900' }, 'Cassidy Torrey: '), 'Owner & Executive Producer'),
+                        e('div', null, e('strong', { className: 'text-slate-900' }, 'Noah Frimer: '), 'Vice President of Distribution (ASU Film & Media)')
                       )
                     )
                   ),

@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#0c0a06] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -69,7 +69,7 @@
 
         return e('div', { className: 'min-h-screen flex flex-col justify-between' },
           e('div', null,
-            e('div', { className: 'bg-amber-950 text-amber-300 text-center py-2 px-4 text-xs font-mono font-bold border-b border-amber-500/40' },
+            e('div', { className: 'bg-blue-50 text-blue-900 text-center py-2 px-4 text-xs font-mono font-bold border-b border-blue-200' },
               '⏳ VARIATION F: THE 4-PRACTICE MONTHLY CAP • Testing Territorial Exclusivity & Urgency'
             ),
             e(window.MoneyManifestationBanner, { basePath: '../../' }),
@@ -77,10 +77,10 @@
             e(window.HeroScarcity, { basePath: '../../' }),
             e(window.TrustBadgesBar, { basePath: '../../' }),
 
-            e('section', { className: 'py-16 bg-slate-950 border-y border-amber-500/20 text-center' },
+            e('section', { className: 'py-16 bg-white border-y border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Exclusivity Scheduling'),
-                e('h2', { className: 'text-2xl md:text-3xl text-white font-cinzel' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Exclusivity Scheduling'),
+                e('h2', { className: 'text-2xl md:text-3xl font-extrabold text-slate-900 font-newsreader' },
                   'Lock In Your Territory Before Your Competitor Does'
                 ),
                 e(window.InteractiveCalendarScheduler, { basePath: '../../' })

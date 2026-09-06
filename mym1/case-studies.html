@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -72,15 +72,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'case-studies.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#0e1726] via-[#080b12] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
-              e('div', { className: 'spotlight-gold' }),
-              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4 relative z-10' },
-                e('div', { className: 'badge-pill' }, 'Empirical Proof & Verified ROI'),
-                e('h1', { className: 'text-white' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Empirical Proof & Verified ROI'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Documented Case Studies Across ',
-                  e('span', { className: 'gold-gradient-text' }, '347+ Practices')
+                  e('span', { className: 'text-blue-600' }, '347+ Practices')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Real surgical practices. Real verified financial windfalls. See the tangible outcomes when commodity marketing is replaced with Cassidy Torrey\'s 5 P\'s Framework.'
                 )
               )
@@ -89,7 +88,7 @@
             e(window.TrustBadgesBar, { basePath: './' }),
             e(window.CaseStudyGrid, { basePath: './' }),
 
-            e('section', { className: 'py-16 bg-[#090e18] border-y border-slate-800' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto' },
                 e(window.DoctorQuoteCarousel, { basePath: './' })
               )
@@ -100,10 +99,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Replicate These Results'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Audit Your Practice Market'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Replicate These Results'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Audit Your Practice Market'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

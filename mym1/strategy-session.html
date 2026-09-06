@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -44,8 +44,8 @@
   <script src="./js/components/MoneyManifestationBanner.js"></script>
   <script src="./js/components/Navbar.js"></script>
   <script src="./js/components/TrustBadgesBar.js"></script>
-  <script src="./js/components/LeadCaptureForm.js"></script>
   <script src="./js/components/DoctorQuoteCarousel.js"></script>
+  <script src="./js/components/LeadCaptureForm.js"></script>
   <script src="./js/components/IronCladGuaranteeBadge.js"></script>
   <script src="./js/components/DisambiguationBanner.js"></script>
   <script src="./js/components/Footer.js"></script>
@@ -69,17 +69,17 @@
             e(window.Navbar, { basePath: './', currentPath: 'strategy-session.html' }),
 
             // Hero Header
-            e('section', { className: 'py-16 bg-gradient-to-b from-[#161309] via-[#0d0c07] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill' }, 'Zero Obligation Practice Consultation'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Zero Obligation Practice Consultation'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Claim Your 30-Minute ',
-                  e('span', { className: 'gold-gradient-text' }, 'Surgical Strategy Audit')
+                  e('span', { className: 'text-blue-600 font-extrabold' }, 'Surgical Strategy Audit')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Speak directly with Cassidy Torrey or Vice President Noah Frimer. We audit your local patient market, assess chair capacity, and construct your 90-Day Guaranteed Acquisition Plan.'
                 ),
-                e('div', { className: 'pt-2 text-xs text-amber-300 font-bold' },
+                e('div', { className: 'pt-2 text-xs text-blue-800 font-bold' },
                   '⚡ Strictly Limited to 4 New Practice Deployments Per Month • Direct Line: (603) 630-3944'
                 )
               )
@@ -88,28 +88,28 @@
             e(window.TrustBadgesBar, { basePath: './' }),
 
             // Form Section
-            e('section', { className: 'py-16 bg-[#07090e]' },
-              e('div', { className: 'container-custom max-w-4xl mx-auto' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
+              e('div', { className: 'container-custom max-w-5xl mx-auto' },
                 e('div', { className: 'grid grid-cols-1 lg:grid-cols-12 gap-8 items-start' },
                   // Left Checklist
                   e('div', { className: 'lg:col-span-5 space-y-6' },
-                    e('div', { className: 'glass-card p-6 space-y-4 gold-border-glow' },
-                      e('h3', { className: 'text-lg font-bold text-white font-cinzel' }, 'What Happens On The Call:'),
-                      e('ul', { className: 'space-y-3 text-xs text-slate-300' },
+                    e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-4 shadow-sm' },
+                      e('h3', { className: 'text-lg font-bold text-slate-900 font-newsreader' }, 'What Happens On The Call:'),
+                      e('ul', { className: 'space-y-3 text-xs text-slate-700' },
                         e('li', { className: 'flex items-start gap-2' },
-                          e('span', { className: 'text-emerald-400 font-bold' }, '✓'),
+                          e('span', { className: 'text-blue-600 font-bold' }, '✓'),
                           e('span', null, 'Local Competitor & DSO Vulnerability Scan within your 15-mile radius')
                         ),
                         e('li', { className: 'flex items-start gap-2' },
-                          e('span', { className: 'text-emerald-400 font-bold' }, '✓'),
+                          e('span', { className: 'text-blue-600 font-bold' }, '✓'),
                           e('span', null, 'Operatory Chair Capacity & Surgical Treatment Acceptance Audit')
                         ),
                         e('li', { className: 'flex items-start gap-2' },
-                          e('span', { className: 'text-emerald-400 font-bold' }, '✓'),
+                          e('span', { className: 'text-blue-600 font-bold' }, '✓'),
                           e('span', null, 'Custom 5 P\'s Storyboard Concept tailored to your clinical philosophy')
                         ),
                         e('li', { className: 'flex items-start gap-2' },
-                          e('span', { className: 'text-emerald-400 font-bold' }, '✓'),
+                          e('span', { className: 'text-blue-600 font-bold' }, '✓'),
                           e('span', null, 'Concrete 90-Day ROI Forecast backed by our 100% Free Work Guarantee')
                         )
                       )

@@ -52,19 +52,19 @@
       e('button', {
         onClick: toggleAudio,
         title: isPlaying ? 'Mute Theatrical Cinematic Soundscape' : 'Enable Theatrical Cinematic Immersion Audio',
-        className: 'flex items-center gap-2.5 px-3.5 py-2 rounded-full border border-yellow-500/40 bg-slate-950/90 backdrop-blur-md text-slate-300 hover:text-yellow-300 shadow-2xl transition hover:scale-105 group'
+        className: 'flex items-center gap-2.5 px-3.5 py-2 rounded-full border border-slate-200 bg-white text-slate-700 hover:text-blue-600 shadow-md transition hover:scale-105 group'
       },
         // Animated Equalizer Bars
         e('div', { className: 'flex items-end gap-0.5 h-3.5' },
-          e('span', { className: 'w-1 bg-yellow-400 rounded-full ' + (isPlaying ? 'h-full animate-pulse' : 'h-1.5') }),
-          e('span', { className: 'w-1 bg-amber-400 rounded-full ' + (isPlaying ? 'h-2/3 animate-bounce' : 'h-2.5') }),
-          e('span', { className: 'w-1 bg-yellow-300 rounded-full ' + (isPlaying ? 'h-5/6 animate-pulse' : 'h-1') })
+          e('span', { className: 'w-1 bg-blue-600 rounded-full ' + (isPlaying ? 'h-full animate-pulse' : 'h-1.5') }),
+          e('span', { className: 'w-1 bg-blue-500 rounded-full ' + (isPlaying ? 'h-2/3 animate-bounce' : 'h-2.5') }),
+          e('span', { className: 'w-1 bg-blue-400 rounded-full ' + (isPlaying ? 'h-5/6 animate-pulse' : 'h-1') })
         ),
         e('div', { className: 'text-left' },
-          e('div', { className: 'text-[10px] uppercase font-mono font-bold tracking-wider text-amber-300' },
+          e('div', { className: 'text-[10px] uppercase font-mono font-bold tracking-wider text-blue-700' },
             isPlaying ? 'Immersion Audio: ON' : 'Cinema Score: OFF'
           ),
-          e('div', { className: 'text-[8px] text-slate-400 hidden sm:block' }, 'Peter Jackson Atmosphere')
+          e('div', { className: 'text-[8px] text-slate-500 hidden sm:block' }, 'Peter Jackson Atmosphere')
         )
       )
     );

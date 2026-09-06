@@ -1,27 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCEBA4"/>
-      <stop offset="35%" stop-color="#D4AF37"/>
-      <stop offset="70%" stop-color="#AA771C"/>
-      <stop offset="100%" stop-color="#805A12"/>
-    </linearGradient>
-    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#94A3B8"/>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0284C7"/>
     </linearGradient>
   </defs>
-  <!-- Emblem: Film Aperture & Crown M -->
+  <!-- Emblem: Film Aperture & Architectural M Monogram in Deep Cobalt -->
   <g transform="translate(10, 8)">
-    <circle cx="32" cy="32" r="30" stroke="url(#goldGrad)" stroke-width="2" fill="#0A0D14" />
-    <circle cx="32" cy="32" r="24" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="32" cy="32" r="30" stroke="#0F172A" stroke-width="2" fill="#F8FAFC" />
+    <circle cx="32" cy="32" r="25" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="3 2" />
     <!-- Film Reel & M Geometry -->
-    <path d="M20 44 L20 22 L32 34 L44 22 L44 44" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <circle cx="32" cy="20" r="2.5" fill="#FCEBA4" />
-    <path d="M24 16 L32 10 L40 16" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M20 44 L20 22 L32 33 L44 22 L44 44" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="32" cy="20" r="2.5" fill="#2563EB" />
   </g>
   <!-- Text Brand -->
-  <text x="82" y="34" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="20" font-weight="700" letter-spacing="3" fill="url(#goldGrad)">MANIFEST</text>
-  <text x="83" y="52" font-family="'Montserrat', -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="4" fill="url(#silverGrad)">MEDIA BROKER GROUP</text>
-  <text x="84" y="66" font-family="'Montserrat', sans-serif" font-size="8" font-weight="400" letter-spacing="2" fill="#94A3B8">CINEMATIC DENTAL ACQUISITION &bull; EST. ARIZONA</text>
+  <text x="82" y="34" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="2.5" fill="#0F172A">MANIFEST</text>
+  <text x="83" y="50" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#2563EB">MEDIA BROKER GROUP</text>
+  <text x="84" y="64" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="500" letter-spacing="1.5" fill="#64748B">CINEMATIC DENTAL ACQUISITION &bull; EST. ARIZONA</text>
 </svg>

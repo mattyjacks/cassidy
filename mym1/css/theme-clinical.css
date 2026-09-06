@@ -1,16 +1,18 @@
-/* Clinical Precision Theme: High clarity, clinical trust, surgical stats */
+/* Clinical Precision Theme: Clean white cards with cobalt blue precision */
 .clinical-card {
-  background: linear-gradient(145deg, #0f172a 0%, #090e17 100%);
-  border: 1px solid #1e293b;
-  border-left: 3px solid var(--accent-blue);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #2563eb;
   border-radius: 8px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
 }
 
 .clinical-card:hover {
-  border-left-color: var(--gold-primary);
-  border-color: rgba(212, 175, 55, 0.4);
+  border-left-color: #1e3a8a;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
   transform: translateY(-2px);
 }
 
@@ -18,45 +20,17 @@
   font-family: var(--font-sans);
   font-size: 2.25rem;
   font-weight: 800;
-  color: var(--gold-light);
+  color: #1e3a8a;
   line-height: 1;
 }
 
 .verified-clinical-tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  color: var(--success);
-  font-size: 0.8rem;
-  font-weight: 600;
+  gap: 0.35rem;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.table-clinical {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table-clinical th {
-  background: #111827;
-  color: var(--gold-light);
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.8rem;
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.table-clinical td {
-  padding: 1rem;
-  border-bottom: 1px solid #1e293b;
-  color: var(--text-secondary);
-}
-
-.table-clinical tr:hover td {
-  background: rgba(212, 175, 55, 0.03);
-  color: var(--text-primary);
 }

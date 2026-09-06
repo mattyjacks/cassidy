@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -69,23 +69,22 @@
             e(window.Navbar, { basePath: './', currentPath: 'about.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#0d1424] via-[#080b12] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
-              e('div', { className: 'spotlight-gold' }),
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4 relative z-10' },
-                e('div', { className: 'badge-pill' }, 'Executive Intelligence Dossier'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Executive Intelligence Dossier'),
+                e('h1', { className: 'text-3xl md:text-5xl font-extrabold text-slate-900 font-newsreader' },
                   'Cassidy Torrey & ',
-                  e('span', { className: 'gold-gradient-text' }, 'Manifest Media Broker Group')
+                  e('span', { className: 'text-blue-700' }, 'Manifest Media Broker Group')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Media broker, executive producer, and clinical marketing strategist merging the psychological mechanics of cinematic storytelling with direct-response surgical advertising.'
                 ),
-                e('div', { className: 'pt-2 flex items-center justify-center gap-4 text-xs text-amber-300 font-semibold' },
+                e('div', { className: 'pt-2 flex items-center justify-center gap-4 text-xs text-blue-700 font-semibold' },
                   e('span', null, '📍 Scottsdale & Mesa, AZ'),
                   e('span', null, '•'),
                   e('span', null, '🎓 MCC Bullhead Dental Hygiene Honors'),
                   e('span', null, '•'),
-                  e('a', { href: 'tel:6036303944', className: 'hover:underline text-yellow-400' }, '📞 (603) 630-3944')
+                  e('a', { href: 'tel:6036303944', className: 'hover:underline text-blue-600 font-bold' }, '📞 (603) 630-3944')
                 )
               )
             ),
@@ -93,69 +92,69 @@
             e(window.TrustBadgesBar, { basePath: './' }),
 
             // Core Biography Sections
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-12' },
                 // Section 1: Childhood in NH and Peter Jackson
-                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 gold-border-glow' },
-                  e('div', { className: 'badge-pill' }, 'Foundational Origin'),
-                  e('h2', { className: 'text-2xl font-bold text-white font-cinzel' },
+                e('div', { className: 'bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4' },
+                  e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Foundational Origin'),
+                  e('h2', { className: 'text-2xl font-bold text-slate-900 font-newsreader' },
                     'Early Life & The Psychology of Cinematic Escapism'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'Cassidy Torrey’s approach to commercial media is deeply rooted in his childhood experiences in New Hampshire. As a youth, Torrey found profound inspiration in movies, a medium that allowed him to transcend his immediate surroundings and experience absolute narrative immersion. A highly pivotal and frequently cited moment in his psychological development occurred when his father took him to see the premiere installment of Peter Jackson\'s The Lord of the Rings.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'For Torrey, this cinematic experience was an education in the power of the "suspension of disbelief". The vastness of the physical and digital landscapes, the meticulously crafted fantasy characters, and the absolute commitment of the acting ensemble succeeded in making him feel entirely transported into the narrative universe. Torrey explicitly connects this childhood epiphany to his adult career as a media broker, utilizing a quote by legendary film critic Roger Ebert as a guiding operational philosophy:'
                   ),
-                  e('div', { className: 'p-4 rounded-lg bg-yellow-950/20 border-l-4 border-yellow-500 italic text-amber-200 text-sm' },
+                  e('div', { className: 'p-4 rounded-xl bg-blue-50/70 border-l-4 border-blue-600 italic text-slate-800 text-sm' },
                     '“The audience is never required to bring suspension of disbelief with them to a movie. It is the filmmakers\' job to create it.” — Roger Ebert'
                   )
                 ),
 
                 // Section 2: Clinical Exposure at MCC Bullhead
-                e('div', { id: 'dental-hygiene', className: 'glass-card p-8 md:p-10 space-y-4 border-sky-500/30' },
-                  e('div', { className: 'badge-pill bg-sky-950/80 text-sky-300 border-sky-500/40' }, 'Verified Clinical Heritage'),
-                  e('h2', { className: 'text-2xl font-bold text-white font-cinzel' },
+                e('div', { id: 'dental-hygiene', className: 'bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4' },
+                  e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Verified Clinical Heritage'),
+                  e('h2', { className: 'text-2xl font-bold text-slate-900 font-newsreader' },
                     'Academic, Athletic, and Clinical Trajectory: MCC Bullhead'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'Torrey’s transition from New Hampshire to the American Southwest is marked by several documented milestones. During his secondary education, Torrey attended Morenci High School in Morenci, Arizona, where he was an active member of the school\'s basketball team, indicating an early integration into the state\'s local culture and competitive environments.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'Crucially, his specialization in dental marketing is not opportunistic but grounded in formal clinical exposure. Academic records from Mohave Community College (MCC) Bullhead indicate that Cassidy Torrey was recognized for outstanding academic service and achievements specifically within the Dental Hygiene program, alongside peer Nora Prisciandaro.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'This first-hand academic exposure to the clinical, procedural, and patient-facing realities of dentistry provides a critical analytical context: Torrey does not approach dental marketing as an external advertising generalist, but rather as an individual possessing intrinsic knowledge of the dental profession’s vernacular, patient anxieties, and operational workflows.'
                   ),
-                  e('div', { className: 'p-4 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono' },
+                  e('div', { className: 'p-4 rounded-lg bg-blue-50 border border-blue-200 text-xs text-blue-900 font-mono' },
                     '✓ Clinical Mastery • Operatory Hygiene Standards • Torque & Surgical Terminology • Patient Phobia Psychology'
                   )
                 ),
 
                 // Section 3: Corporate Evolution & Broken Door Media
-                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 gold-border-glow' },
-                  e('div', { className: 'badge-pill' }, 'Corporate Architecture'),
-                  e('h2', { className: 'text-2xl font-bold text-white font-cinzel' },
+                e('div', { className: 'bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4' },
+                  e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Corporate Architecture'),
+                  e('h2', { className: 'text-2xl font-bold text-slate-900 font-newsreader' },
                     'Corporate Evolution: From Broken Door Media to Manifest Media Broker Group'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'Prior to the prominence of Manifest Media, Torrey operated as the Chief Executive Officer of Broken Door Media (Broken Door Digital LLC) headquartered at 1969 E Broadway Rd, Tempe, AZ 85282. During this period in early 2021, Torrey positioned himself as a thought leader, culminating in his notable appearance on the highly regarded Shared Practices podcast (Episode 6-32: The Future of Storytelling in Dentistry) on March 22, 2021.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'In March 2026, Broken Door Digital LLC was named in a small claims civil complaint (Case Number: CC2026059957) filed by American Express National Bank in the Highland Justice Court of Maricopa County. Such commercial credit matters are routine within the lifecycle of bootstrapped media companies and precipitated the strategic transition of assets and operational focus into Manifest Media Broker Group, LLC.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'Today, Manifest Media Broker Group represents a maturation into a comprehensive media brokerage connecting independent medical practices with top-tier American film production capabilities, supported by Vice President of Distribution Noah Frimer (ASU Film & Media Production degree, 20+ producing credits).'
                   )
                 ),
 
                 // Section 4: Personal & Hollywood Horizon
-                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 border-yellow-500/20' },
-                  e('div', { className: 'badge-pill' }, 'Personal & Entertainment Footprint'),
-                  e('h2', { className: 'text-2xl font-bold text-white font-cinzel' },
+                e('div', { className: 'bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4' },
+                  e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Personal & Entertainment Footprint'),
+                  e('h2', { className: 'text-2xl font-bold text-slate-900 font-newsreader' },
                     'Personal Milestones & The Stage 32 Network'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-600 text-sm leading-relaxed' },
                     'On a personal level, public registry records indicate that Cassidy Torrey is engaged to Chandler Queen, with a wedding scheduled for November 13, 2026, in Pilot Mountain, North Carolina. In Hollywood networks, Torrey maintains an active profile on Stage 32 as a producer, talent agent, and business affairs consultant operating out of Mesa, AZ, as well as Kavyar Brand CEO (photography by Runway & Julia Perry).'
                   )
                 )
@@ -163,21 +162,21 @@
             ),
 
             // Timeline component
-            e('section', { className: 'py-16 bg-[#080b11] border-t border-slate-800' },
+            e('section', { className: 'py-16 bg-white border-t border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
                 e('div', { className: 'text-center space-y-2 mb-10' },
-                  e('h2', { className: 'text-2xl font-bold text-white font-cinzel' }, 'Chronological Trajectory'),
-                  e('p', { className: 'text-xs text-slate-400' }, 'From New Hampshire cinematic epiphanies to Southwest media brokerage.')
+                  e('h2', { className: 'text-2xl font-bold text-slate-900 font-newsreader' }, 'Chronological Trajectory'),
+                  e('p', { className: 'text-xs text-slate-600' }, 'From New Hampshire cinematic epiphanies to Southwest media brokerage.')
                 ),
                 timeline.map(function(t, i) {
-                  return e('div', { key: i, className: 'p-6 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2' },
-                    e('div', { className: 'flex items-center justify-between text-xs text-amber-300 font-bold' },
+                  return e('div', { key: i, className: 'p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2' },
+                    e('div', { className: 'flex items-center justify-between text-xs text-blue-700 font-bold' },
                       e('span', null, t.era + ' • ' + t.location),
-                      e('span', { className: 'text-slate-500 font-mono' }, 'Milestone 0' + (i + 1))
+                      e('span', { className: 'text-slate-400 font-mono' }, 'Milestone 0' + (i + 1))
                     ),
-                    e('h3', { className: 'text-lg font-bold text-white' }, t.title),
-                    e('p', { className: 'text-xs text-slate-300 leading-relaxed' }, t.description),
-                    e('div', { className: 'text-[11px] text-yellow-400 italic pt-1' }, '“' + t.guidingQuote + '”')
+                    e('h3', { className: 'text-lg font-bold text-slate-900' }, t.title),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' }, t.description),
+                    e('div', { className: 'text-xs text-blue-600 italic pt-1' }, '“' + t.guidingQuote + '”')
                   );
                 })
               )
@@ -186,10 +185,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-slate-50 border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Connect With Cassidy Torrey'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Schedule an Executive Consultation'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Connect With Cassidy Torrey'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Schedule an Executive Consultation'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#050b12] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -76,7 +76,7 @@
 
         return e('div', { className: 'min-h-screen flex flex-col justify-between' },
           e('div', null,
-            e('div', { className: 'bg-sky-950 text-sky-300 text-center py-2 px-4 text-xs font-mono font-bold border-b border-sky-500/40' },
+            e('div', { className: 'bg-blue-50 text-blue-900 text-center py-2 px-4 text-xs font-mono font-bold border-b border-blue-200' },
               '🦷 VARIATION C: THE CLINICAL INSIDER • Testing MCC Bullhead Academic Honors & Operatory Fluency'
             ),
             e(window.MoneyManifestationBanner, { basePath: '../../' }),
@@ -90,10 +90,10 @@
             e(window.IronCladGuaranteeBadge, { basePath: '../../' }),
             e(window.DisambiguationBanner, { basePath: '../../' }),
 
-            e('section', { className: 'py-20 bg-slate-950 border-t border-sky-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill bg-sky-950 text-sky-300 border-sky-500/40' }, 'Surgeon to Insider Call'),
-                e('h2', { className: 'text-3xl md:text-4xl text-white font-cinzel' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Surgeon to Insider Call'),
+                e('h2', { className: 'text-3xl md:text-4xl font-extrabold text-slate-900 font-newsreader' },
                   'Speak With Someone Who Knows Your Operatory'
                 ),
                 e(window.LeadCaptureForm, { basePath: '../../' })

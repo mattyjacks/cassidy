@@ -1,19 +1,20 @@
-/* A/B Switcher Footer & Dock Deck */
+/* Professional CRO / A/B Testing Console Deck */
 .ab-switcher-deck {
-  background: linear-gradient(180deg, #0d121c 0%, #06090e 100%);
-  border-top: 2px solid var(--gold-primary);
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
-  padding: 1.5rem 1rem;
+  background: #0f172a;
+  border-top: 2px solid #2563eb;
+  padding: 1.75rem 1rem;
+  color: #f8fafc;
   position: relative;
   z-index: 999;
+  box-shadow: 0 -10px 25px rgba(15, 23, 42, 0.15);
 }
 
 .ab-variant-card {
-  background: #131a26;
-  border: 1px solid #1f293d;
+  background: #1e293b;
+  border: 1px solid #334155;
   border-radius: 8px;
   padding: 1rem;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,47 +22,46 @@
 }
 
 .ab-variant-card:hover {
-  border-color: var(--gold-primary);
-  background: #182233;
-  transform: translateY(-3px);
+  border-color: #60a5fa;
+  background: #243247;
+  transform: translateY(-2px);
 }
 
 .ab-variant-card.active {
-  border: 2px solid var(--gold-primary);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(19, 26, 38, 0.95) 100%);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  border: 2px solid #3b82f6;
+  background: #172554;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .ab-pill-active {
   position: absolute;
-  top: -10px;
+  top: -9px;
   right: 12px;
-  background: var(--gold-primary);
-  color: #07090e;
+  background: #2563eb;
+  color: #ffffff;
   font-size: 0.65rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 2px 8px;
-  border-radius: 12px;
+  border-radius: 9999px;
 }
 
 .ab-quick-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
-  justify-content: center;
+  gap: 0.5rem;
 }
 
 .ab-quick-btn {
-  padding: 0.4rem 0.9rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid #28354d;
-  background: #0f1522;
-  color: #cbd5e1;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;
@@ -70,14 +70,14 @@
 }
 
 .ab-quick-btn:hover {
-  border-color: var(--gold-primary);
-  color: var(--gold-light);
-  background: #192336;
+  border-color: #60a5fa;
+  color: #ffffff;
+  background: #273549;
 }
 
 .ab-quick-btn.current {
-  background: var(--gold-primary);
-  color: #000;
+  background: #2563eb;
+  color: #ffffff;
   font-weight: 700;
-  border-color: var(--gold-primary);
+  border-color: #3b82f6;
 }

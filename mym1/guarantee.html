@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#060a08] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -44,9 +44,12 @@
   <script src="./js/components/MoneyManifestationBanner.js"></script>
   <script src="./js/components/Navbar.js"></script>
   <script src="./js/components/TrustBadgesBar.js"></script>
+  <script src="./js/components/DoctorQuoteCarousel.js"></script>
+  <script src="./js/components/CaseStudyCard.js"></script>
+  <script src="./js/components/CaseStudyGrid.js"></script>
+  <script src="./js/components/RoiCalculator.js"></script>
   <script src="./js/components/IronCladGuaranteeBadge.js"></script>
   <script src="./js/components/DsoComparisonTable.js"></script>
-  <script src="./js/components/RoiCalculator.js"></script>
   <script src="./js/components/DisambiguationBanner.js"></script>
   <script src="./js/components/LeadCaptureForm.js"></script>
   <script src="./js/components/Footer.js"></script>
@@ -70,14 +73,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'guarantee.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#081710] via-[#060e0a] to-[#060a08] border-b border-emerald-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill bg-emerald-950 text-emerald-300 border-emerald-500/50' }, 'Complete Risk Elimination'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200' }, 'Complete Risk Elimination'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'The 90-Day ',
-                  e('span', { className: 'text-emerald-400 font-extrabold' }, 'Iron-Clad Guarantee')
+                  e('span', { className: 'text-emerald-600 font-extrabold' }, 'Iron-Clad Guarantee')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'We believe agencies should only get paid when doctors win. If your surgical practice does not observe measurable patient growth in 90 days, we work 100% free until you do.'
                 )
               )
@@ -87,22 +90,22 @@
             e(window.IronCladGuaranteeBadge, { basePath: './' }),
 
             // Deep Dive on Contract Terms
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
-                e('div', { className: 'glass-card-premium p-8 md:p-12 space-y-6' },
-                  e('h2', { className: 'text-2xl font-cinzel text-white font-bold' }, 'The Three Principles of Our Iron-Clad Guarantee:'),
+                e('div', { className: 'bg-white rounded-xl border border-slate-200 shadow-sm p-8 md:p-12 space-y-6' },
+                  e('h2', { className: 'text-2xl font-newsreader text-slate-900 font-bold' }, 'The Three Principles of Our Iron-Clad Guarantee:'),
                   
-                  e('div', { className: 'space-y-4 text-sm text-slate-300 leading-relaxed' },
-                    e('div', { className: 'p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1' },
-                      e('h3', { className: 'text-emerald-400 font-bold text-sm' }, '1. Absolute Transparency: No Hidden Asterisks'),
+                  e('div', { className: 'space-y-4 text-sm text-slate-700 leading-relaxed' },
+                    e('div', { className: 'p-5 rounded-lg bg-slate-50 border border-slate-200 space-y-1' },
+                      e('h3', { className: 'text-emerald-700 font-bold text-sm' }, '1. Absolute Transparency: No Hidden Asterisks'),
                       e('p', null, 'Unlike generic agencies that hide behind subjective metrics like "impressions" or "website sessions", our guarantee is pegged to measurable surgical patient inquiries and booked consultations. If your phone isn\'t ringing with high-ticket patients, we haven\'t finished our job.')
                     ),
-                    e('div', { className: 'p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1' },
-                      e('h3', { className: 'text-emerald-400 font-bold text-sm' }, '2. Free Ongoing Execution: Skin in the Game'),
+                    e('div', { className: 'p-5 rounded-lg bg-slate-50 border border-slate-200 space-y-1' },
+                      e('h3', { className: 'text-emerald-700 font-bold text-sm' }, '2. Free Ongoing Execution: Skin in the Game'),
                       e('p', null, 'If targets are not hit within the first 90-day window, Manifest Media Broker Group waives 100% of its agency management fees. We continue refining creative assets, dispatching supplementary content, and re-optimizing campaign funnels on our own dime until targeted growth is confirmed.')
                     ),
-                    e('div', { className: 'p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1' },
-                      e('h3', { className: 'text-emerald-400 font-bold text-sm' }, '3. Domestic Accountability: Direct Executive Access'),
+                    e('div', { className: 'p-5 rounded-lg bg-slate-50 border border-slate-200 space-y-1' },
+                      e('h3', { className: 'text-emerald-700 font-bold text-sm' }, '3. Domestic Accountability: Direct Executive Access'),
                       e('p', null, 'Your practice will never be passed off to junior account managers or offshore support queues. Cassidy Torrey and Vice President Noah Frimer personally review your campaign metrics weekly.')
                     )
                   )
@@ -115,10 +118,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-emerald-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill bg-emerald-950 text-emerald-300 border-emerald-500/40' }, 'Zero Risk Consultation'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Lock In Your Guaranteed Campaign'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200' }, 'Zero Risk Consultation'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Lock In Your Guaranteed Campaign'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

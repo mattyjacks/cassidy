@@ -19,8 +19,7 @@
 
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-</head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -77,7 +76,7 @@
         return e('div', { className: 'min-h-screen flex flex-col justify-between' },
           e('div', null,
             // A/B Banner at top
-            e('div', { className: 'bg-yellow-950/90 text-yellow-300 text-center py-2 px-4 text-xs font-mono font-bold border-b border-yellow-500/40' },
+            e('div', { className: 'bg-blue-50 text-blue-900 text-center py-2 px-4 text-xs font-mono font-bold border-b border-blue-200' },
               '🎬 VARIATION A: THE HOLLYWOOD DIRECTOR CUT • Testing Narrative Immersion Hypothesis'
             ),
             e(window.MoneyManifestationBanner, { basePath: '../../' }),
@@ -86,13 +85,13 @@
             e(window.TrustBadgesBar, { basePath: '../../' }),
 
             // Theatrical Narrative Feature
-            e('section', { className: 'py-16 bg-[#090d16] border-y border-yellow-500/20' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6 text-center' },
-                e('div', { className: 'badge-pill' }, 'Cinematic Psychology'),
-                e('h2', { className: 'text-2xl md:text-3xl text-white font-cinzel' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Cinematic Psychology'),
+                e('h2', { className: 'text-2xl md:text-3xl text-slate-900 font-newsreader font-bold' },
                   'Why Cinema Bypasses Conscious Skepticism'
                 ),
-                e('p', { className: 'text-slate-300 text-sm md:text-base leading-relaxed max-w-3xl mx-auto' },
+                e('p', { className: 'text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl mx-auto' },
                   'As a youth in New Hampshire, Cassidy Torrey was taken by his father to Peter Jackson\'s The Lord of the Rings premiere. The profound realization that cinema creates a world so complete that disbelief is willingly suspended became his operational compass. Today, Torrey applies that exact psychological transport to dentistry: taking terrified patients from dental anxiety to crying tears of relief at their new smile.'
                 ),
                 e('div', { className: 'pt-4' },
@@ -100,7 +99,7 @@
                     onClick: function() {
                       if (window.openVideoModal) window.openVideoModal("The Cinematic Patient Journey", "Directed by Cassidy Torrey");
                     },
-                    className: 'btn-gold text-xs py-3 px-6'
+                    className: 'btn-blue text-xs py-3 px-6 font-bold'
                   }, 'Watch The Cinematic Patient Showcase Reel')
                 )
               )
@@ -113,10 +112,10 @@
             e(window.IronCladGuaranteeBadge, { basePath: '../../' }),
             e(window.DisambiguationBanner, { basePath: '../../' }),
 
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Direct Consultation'),
-                e('h2', { className: 'text-3xl md:text-4xl text-white font-cinzel' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Direct Consultation'),
+                e('h2', { className: 'text-3xl md:text-4xl font-extrabold text-slate-900 font-newsreader' },
                   'Bring Hollywood Production to Your Practice'
                 ),
                 e(window.LeadCaptureForm, { basePath: '../../' })

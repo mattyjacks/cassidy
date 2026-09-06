@@ -20,14 +20,14 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
   <!-- Data & Utils -->
   <script src="./js/data/caseStudies.js"></script>
   <script src="./js/data/fivePs.js"></script>
-  <script src="./js/data/bioTimeline.js"></script>
+  <script src="./js/data/newHollywoodData.js"></script>
   <script src="./js/data/competitorComparison.js"></script>
   <script src="./js/data/faqItems.js"></script>
   <script src="./js/data/podcastData.js"></script>
@@ -69,16 +69,15 @@
             e(window.Navbar, { basePath: './', currentPath: 'new-hollywood.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#140e24] via-[#090b14] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
-              e('div', { className: 'spotlight-gold' }),
-              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4 relative z-10' },
-                e('div', { className: 'badge-pill' }, 'Film & Television Infrastructure'),
-                e('h1', { className: 'text-white' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
+              e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Film & Television Infrastructure'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Fostering The ',
-                  e('span', { className: 'gold-gradient-text' }, '"New Hollywood"'),
+                  e('span', { className: 'text-blue-600' }, '"New Hollywood"'),
                   ' in Arizona'
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'Decentralizing production from Southern California to the American Southwest. How Cassidy Torrey and Noah Frimer are bridging high-ticket commercial media with national film and television distribution.'
                 )
               )
@@ -88,37 +87,37 @@
             e(window.NewHollywoodShowcase, { basePath: './' }),
 
             // Exhaustive Narrative on Arizona as Film Hub
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-10' },
-                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 gold-border-glow' },
-                  e('h2', { className: 'text-2xl font-cinzel text-white font-bold' }, 'The Macro-Vision: Decentralizing American Cinema'),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                e('div', { className: 'bg-white rounded-xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4' },
+                  e('h2', { className: 'text-2xl font-newsreader text-slate-900 font-bold' }, 'The Macro-Vision: Decentralizing American Cinema'),
+                  e('p', { className: 'text-slate-700 text-sm leading-relaxed' },
                     'Through exclusive YouTube interviews and podcast appearances, Torrey has articulated a groundbreaking macro-vision to transform Arizona into the "New Hollywood". This strategic pivot capitalizes on broader entertainment industry trends where filmmakers are increasingly seeking geographically diverse locales that offer favorable tax incentives, lower logistical overhead, and expansive natural landscapes—landscapes that perfectly mirror the cinematic vastness Torrey originally admired in The Lord of the Rings.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-700 text-sm leading-relaxed' },
                     'Operating out of Scottsdale and Mesa, Manifest Media Broker Group manages an expanding entertainment slate. The company is actively involved in the development, production, and distribution of reality television shows, documentary films, short films, and high-end commercial productions.'
                   )
                 ),
 
                 e('div', { className: 'grid grid-cols-1 md:grid-cols-2 gap-6' },
-                  e('div', { className: 'glass-card p-6 space-y-3 border-yellow-500/30' },
-                    e('h3', { className: 'text-lg font-bold text-white font-cinzel' }, 'Noah Frimer, VP of Distribution'),
-                    e('p', { className: 'text-xs text-slate-300 leading-relaxed' },
+                  e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm' },
+                    e('h3', { className: 'text-lg font-bold text-slate-900 font-newsreader' }, 'Noah Frimer, VP of Distribution'),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' },
                       'In November 2023, Cassidy Torrey brought on Noah Frimer as the Vice President of Distribution. Frimer holds a degree in Film and Media Production from Arizona State University (ASU) and brings over 20 producing credits spanning reality TV, feature documentaries, and narrative shorts. He manages multi-state production crews and broadcast distribution contracts.'
                     )
                   ),
-                  e('div', { className: 'glass-card p-6 space-y-3 border-yellow-500/30' },
-                    e('h3', { className: 'text-lg font-bold text-white font-cinzel' }, 'Stage 32 & Red Carpet Circuits'),
-                    e('p', { className: 'text-xs text-slate-300 leading-relaxed' },
+                  e('div', { className: 'bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm' },
+                    e('h3', { className: 'text-lg font-bold text-slate-900 font-newsreader' }, 'Stage 32 & Red Carpet Circuits'),
+                    e('p', { className: 'text-xs text-slate-600 leading-relaxed' },
                       'Torrey maintains an active profile on Stage 32—a premier global platform connecting film and television creatives—operating as a producer, talent agent, and business affairs consultant in Mesa, AZ. He was recently featured in the TAP Interviews official sizzle trailer for the eZWay Awards Golden Gala 2026.'
                     )
                   )
                 ),
 
                 // Synergistic Benefit to Clinical Clients
-                e('div', { className: 'p-6 rounded-xl bg-gradient-to-r from-yellow-950/30 via-slate-900 to-yellow-950/30 border border-yellow-500/40 text-sm text-slate-300 space-y-2' },
-                  e('h4', { className: 'text-amber-300 font-cinzel font-bold text-base' }, 'Why This Matters to Independent Medical Practices:'),
-                  e('p', { className: 'text-xs leading-relaxed' },
+                e('div', { className: 'p-6 rounded-xl bg-blue-50 border border-blue-200 text-sm text-slate-800 space-y-2' },
+                  e('h4', { className: 'text-blue-900 font-newsreader font-bold text-base' }, 'Why This Matters to Independent Medical Practices:'),
+                  e('p', { className: 'text-xs text-slate-700 leading-relaxed' },
                     'This dual-track corporate structure gives Manifest Media an unbeatable competitive advantage. The lighting rigs, cinema cameras, and documentary storytelling methods utilized to capture patient transformations in Nashville, Austin, or Phoenix are identical to those deployed on national documentary shoots. Prospective patients immediately recognize that your clinic is represented by a bona fide film production house.'
                   )
                 )
@@ -129,10 +128,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Film-Grade Medical Marketing'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Bring The New Hollywood to Your Operatory'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Film-Grade Medical Marketing'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Bring The New Hollywood to Your Operatory'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

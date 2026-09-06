@@ -25,8 +25,7 @@
   <!-- React 18 & ReactDOM CDN -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-</head>
-<body class="bg-[#07090e] text-slate-100 selection:bg-yellow-500 selection:text-black">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -106,7 +105,7 @@
             e(window.TrustBadgesBar, { basePath: './' }),
 
             // Quick Social Proof Strip
-            e('section', { className: 'py-12 bg-slate-950/60 border-b border-slate-900' },
+            e('section', { className: 'py-12 bg-white border-b border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto' },
                 e(window.DoctorQuoteCarousel, { basePath: './' })
               )
@@ -128,7 +127,7 @@
             e(window.VideoVaultGrid, { basePath: './' }),
 
             // Treatment Acceptance & ROI Modeler
-            e('section', { className: 'py-16 bg-[#080b12] border-t border-slate-800' },
+            e('section', { className: 'py-16 bg-slate-50 border-t border-slate-200' },
               e('div', { className: 'container-custom' },
                 e(window.TreatmentAcceptanceModeler, { basePath: './' })
               )
@@ -162,14 +161,14 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Interactive Calendar Scheduler & Lead Intake Section
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#07090e] to-[#0d1320] border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-slate-50 border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Executive Strategy Call'),
-                e('h2', { className: 'text-3xl md:text-4xl text-white font-cinzel' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Executive Strategy Call'),
+                e('h2', { className: 'text-3xl md:text-4xl font-extrabold text-slate-900 font-newsreader' },
                   'Lock In Your Private ',
-                  e('span', { className: 'gold-gradient-text' }, '30-Minute Consultation')
+                  e('span', { className: 'text-blue-700' }, '30-Minute Consultation')
                 ),
-                e('p', { className: 'text-slate-300 text-sm md:text-base max-w-2xl mx-auto' },
+                e('p', { className: 'text-slate-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed' },
                   'Select your date and time directly on our Scottsdale master calendar. Backed by Cassidy Torrey\'s 100% Free Work Guarantee.'
                 ),
                 e(window.InteractiveCalendarScheduler, { basePath: './' })

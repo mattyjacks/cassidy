@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 </head>
-<body class="bg-[#07090e] text-slate-100">
+<body class="bg-[#f8fafc] text-slate-900 selection:bg-blue-600 selection:text-white">
 
   <div id="root"></div>
 
@@ -68,14 +68,14 @@
             e(window.Navbar, { basePath: './', currentPath: 'synergies.html' }),
 
             // Hero Header
-            e('section', { className: 'py-20 bg-gradient-to-b from-[#141b2b] via-[#090e17] to-[#07090e] border-b border-yellow-500/20 text-center relative' },
+            e('section', { className: 'py-20 bg-white border-b border-slate-200 text-center relative' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-4' },
-                e('div', { className: 'badge-pill' }, 'Southwest Media Consortium'),
-                e('h1', { className: 'text-white' },
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Southwest Media Consortium'),
+                e('h1', { className: 'text-3xl md:text-5xl font-newsreader font-bold text-slate-900 tracking-tight' },
                   'Strategic Alliances & ',
-                  e('span', { className: 'gold-gradient-text' }, 'Corporate Synergies')
+                  e('span', { className: 'text-blue-600' }, 'Corporate Synergies')
                 ),
-                e('p', { className: 'text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
+                e('p', { className: 'text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed' },
                   'How Cassidy Torrey and Manifest Media Broker Group collaborate across Arizona Business Management, Amplus Magnus Optus LLC, NJD Corp, and VIBE Media.'
                 )
               )
@@ -85,14 +85,14 @@
             e(window.CorporateAlliance, { basePath: './' }),
 
             // Narrative Section
-            e('section', { className: 'py-16 bg-[#07090e]' },
+            e('section', { className: 'py-16 bg-slate-50 border-y border-slate-200' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-8' },
-                e('div', { className: 'glass-card p-8 md:p-10 space-y-4 gold-border-glow' },
-                  e('h2', { className: 'text-2xl font-cinzel text-white font-bold' }, 'Expansion Beyond Dentistry: End-to-End Media Solutions'),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                e('div', { className: 'bg-white rounded-xl border border-slate-200 p-8 md:p-10 space-y-4 shadow-sm' },
+                  e('h2', { className: 'text-2xl font-newsreader text-slate-900 font-bold' }, 'Expansion Beyond Dentistry: End-to-End Media Solutions'),
+                  e('p', { className: 'text-slate-700 text-sm leading-relaxed' },
                     'While the dental implant niche represents a highly lucrative, quantifiable success for Torrey, his operations as a media broker extend into broader business management and commercial consulting. Manifest Media Broker Group does not operate in isolation; it functions as part of a synergistic ecosystem of Arizona-based corporate entities designed to provide end-to-end media solutions for a variety of enterprises.'
                   ),
-                  e('p', { className: 'text-slate-300 text-sm leading-relaxed' },
+                  e('p', { className: 'text-slate-700 text-sm leading-relaxed' },
                     'Under Arizona Business Management, Torrey partners alongside David Mayorga of Amplus Magnus Optus LLC and Natalie Joy Dolph of NJD Corp. This alliance brokers comprehensive media packages outside medicine: short television commercials, highly tailored social media cuts, and ultra-high-resolution still ads optimized for print and digital billboards.'
                   )
                 )
@@ -102,10 +102,10 @@
             e(window.DisambiguationBanner, { basePath: './' }),
 
             // Booking Form
-            e('section', { className: 'py-20 bg-slate-950 border-t border-yellow-500/20 text-center' },
+            e('section', { className: 'py-20 bg-white border-t border-slate-200 text-center' },
               e('div', { className: 'container-custom max-w-4xl mx-auto space-y-6' },
-                e('div', { className: 'badge-pill' }, 'Commercial Media Brokerage'),
-                e('h2', { className: 'text-3xl text-white font-cinzel' }, 'Inquire About Enterprise Media Brokerage'),
+                e('div', { className: 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200' }, 'Commercial Media Brokerage'),
+                e('h2', { className: 'text-3xl text-slate-900 font-newsreader font-bold' }, 'Inquire About Enterprise Media Brokerage'),
                 e(window.LeadCaptureForm, { basePath: './' })
               )
             )

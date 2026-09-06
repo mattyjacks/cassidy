@@ -1,18 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
-  <defs>
-    <linearGradient id="goldSeal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF0BE"/>
-      <stop offset="30%" stop-color="#E5C158"/>
-      <stop offset="70%" stop-color="#C69214"/>
-      <stop offset="100%" stop-color="#805A0C"/>
-    </linearGradient>
-  </defs>
-  <!-- Scalloped Seal Edge -->
-  <circle cx="60" cy="60" r="54" fill="#0A0E17" stroke="url(#goldSeal)" stroke-width="4" stroke-dasharray="6 3"/>
-  <circle cx="60" cy="60" r="46" fill="#151C28" stroke="url(#goldSeal)" stroke-width="1.5"/>
-  <text x="60" y="42" font-family="'Cinzel', serif" font-size="16" font-weight="900" letter-spacing="1" fill="#FFF0BE" text-anchor="middle">90-DAY</text>
-  <text x="60" y="58" font-family="'Cinzel', serif" font-size="12" font-weight="800" letter-spacing="2" fill="url(#goldSeal)" text-anchor="middle">IRON-CLAD</text>
-  <text x="60" y="74" font-family="'Montserrat', sans-serif" font-size="8" font-weight="800" letter-spacing="1.5" fill="#FFFFFF" text-anchor="middle">GUARANTEE</text>
-  <text x="60" y="87" font-family="'Montserrat', sans-serif" font-size="6" font-weight="600" letter-spacing="0.5" fill="#E5C158" text-anchor="middle">PATIENT GROWTH</text>
-  <text x="60" y="96" font-family="'Montserrat', sans-serif" font-size="5" font-weight="500" letter-spacing="0.5" fill="#94A3B8" text-anchor="middle">OR WE WORK FREE</text>
+  <!-- Clean Blue & Platinum Scalloped Seal -->
+  <circle cx="60" cy="60" r="54" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2.5" stroke-dasharray="4 2"/>
+  <circle cx="60" cy="60" r="46" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.2"/>
+  <text x="60" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" letter-spacing="1.5" fill="#1E3A8A" text-anchor="middle">90-DAY</text>
+  <text x="60" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" letter-spacing="2" fill="#2563EB" text-anchor="middle">IRON-CLAD</text>
+  <text x="60" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" letter-spacing="1" fill="#0F172A" text-anchor="middle">GUARANTEE</text>
+  <text x="60" y="87" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="700" letter-spacing="0.5" fill="#059669" text-anchor="middle">PATIENT GROWTH</text>
+  <text x="60" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="5.5" font-weight="600" letter-spacing="0.5" fill="#64748B" text-anchor="middle">OR WE WORK FREE</text>
 </svg>
